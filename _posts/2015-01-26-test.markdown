@@ -4,4 +4,6 @@ title:  "test"
 date:   2015-01-26 23:30:18
 categories: jekyll update
 ---
-test for hello world
+Nokia 6108
+
+![nokia 6108](http://c.picphotos.baidu.com/album/s%3D900%3Bq%3D90/sign=aa93028165380cd7e21eaeed917fdc09/aa18972bd40735fafc20b3889e510fb30f24082a.jpg)
