@@ -12,10 +12,11 @@ tags:
 JMX(Java Management Extensions,Java管理扩展)  
 [JMX官网](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)  
 概念性的东西在官网上有解释,这里就不多解释,直奔主题.  
-  
-  
+
+
 先写一个简单的测试类,MyTest.java  
 ---
+<br/>
 
 {% highlight java %}
 public class MyTest implements MyTestMBean {
@@ -42,9 +43,8 @@ public class MyTest implements MyTestMBean {
   
 把想暴露的方法封装成一个接口
 ---
-
-注意:
- 
+<br/>
+注意:   
 - 接口的名称必须是类名+MBean,这里就是MyTestMBean.java
 - 修饰符必须是public,interface的默认public abstract 是不行的.
 
@@ -60,7 +60,7 @@ public interface MyTestMBean {
   
 写个测试类试试:Main.java
 ---
-
+<br/>
 {% highlight java %}
 public class Main {
     public static void main(String args[]) throws Exception {
@@ -80,6 +80,6 @@ public class Main {
   
 打开jconsole
 ---
-
+<br/>
 可以看到:yTest下面有"属性"(pojo)和"操作"
 点点看,还能执行方法,是不是很神奇啊.到这里一个mbean的helloworld就完成了.
