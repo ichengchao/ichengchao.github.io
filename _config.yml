@@ -1,7 +1,7 @@
 markdown: rdiscount
 highlighter: pygments
 permalink: /:year/:month/:day/:title.html
-name: "charles blog"
+name: "ichengchao"
 
 author: "charles"
 atom-baseurl: "http://chengchao.name"
