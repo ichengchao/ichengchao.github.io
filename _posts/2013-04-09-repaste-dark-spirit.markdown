@@ -1,11 +1,13 @@
 ---
 layout: post
-title: [转]中国黑客传说：游走在黑暗中的精灵
+title: 转摘-中国黑客传说:游走在黑暗中的精灵
 date: 2013-04-09 12:31
 tags:
   - repaste
   - tech
+  
 ---
+
 
 
 ![dark-sprite](http://7vii66.com1.z0.glb.clouddn.com/2013-04-09-repaste-dark-spirit.jpg) 
