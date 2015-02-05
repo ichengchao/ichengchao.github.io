@@ -1,13 +1,24 @@
 ---
-title: happy new year
+title: Goodbye 2014
 layout: post
 tags:
   - photography
   
 ---
-![charles](http://7vii66.com1.z0.glb.clouddn.com/2.jpg)
+2014就这样溜走了.
+
+- 阿里上市
+- 老罗的T1发布
+- Alimonitor重构
+
 
 新年先来个平板支撑,happy new year.
+用很恶心,不标准的姿势赢得了一个spalding篮球.
+
+团队年夜饭的时候刚好女儿发高烧,没有喝酒.
+
+
+![charles](http://7vii66.com1.z0.glb.clouddn.com/2.jpg)
 
 ---
 
