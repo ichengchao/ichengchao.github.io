@@ -6,7 +6,7 @@ tags:
   - raspberrypi
   
 ---
-{% highlight %}
+{% highlight sh %}
 wget http://goo.gl/go5yx -O install_chrome.sh
 chmod a+x install_chrome.sh
 ./install_chrome.sh
