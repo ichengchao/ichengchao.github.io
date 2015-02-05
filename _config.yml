@@ -1,13 +1,22 @@
-# Site settings
-title: charles
-email: kidccc@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  lift is short,be happy.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://ichengchao.github.io" # the base hostname & protocol for your site
-twitter_username: ichengchao
-github_username:  ichengchao
+markdown: rdiscount
+highlighter: pygments
+permalink: /:year/:month/:day/:title.html
+name: "charles blog"
 
-# Build settings
-markdown: kramdown
-host: 0.0.0.0
+author: "charles"
+atom-baseurl: "http://chengchao.name"
+
+navigations:
+  - title: Archive
+    class: fa fa-list-ul
+    href: /archive.html
+  - title: Tags
+    class: fa fa-tags
+    href: /tags.html
+  - title: About
+    class: fa fa-user
+    href: /about.html
+  - title: Subscribe
+    class: fa fa-rss
+    href: /atom.xml
+
