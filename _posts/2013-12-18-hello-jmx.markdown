@@ -11,6 +11,8 @@ JMX(Java Management Extensions,Java管理扩展)
 [JMX官网](http://www.oracle.com/technetwork/java/javase/tech/javamanagement-140525.html)  
 概念性的东西在官网上有解释,这里就不多解释,直奔主题.  
 
+
+
 先写一个简单的测试类,MyTest.java  
 ---
 
@@ -36,12 +38,14 @@ public class MyTest implements MyTestMBean {
 }
 {% endhighlight %}
 
+
+
 把想暴露的方法封装成一个接口
 ---
- 
-注意:  
-- 接口的名称必须是类名+MBean,这里就是MyTestMBean.java
-- 修饰符必须是public,interface的默认public abstract 是不行的.
+
+注意:    
+ - 接口的名称必须是类名+MBean,这里就是MyTestMBean.java
+ - 修饰符必须是public,interface的默认public abstract 是不行的.
 
 {% highlight java %}
 public interface MyTestMBean {
@@ -70,6 +74,8 @@ public class Main {
 
 }
 {% endhighlight %}
+
+
 
 打开jconsole
 ---
