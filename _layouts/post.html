@@ -36,7 +36,7 @@ layout: default
   <section class="post">
   {{ content }}
   </section>
-  {% if page.guid %}
+  
   <div class="divider">
     <span>
     {% if page.previous %}
@@ -58,6 +58,8 @@ layout: default
     {% endif %}
     </span>
   </div>
+  
+  {% if page.guid %}
 
   <!-- BEGIN comment
   <section class="comment">
