@@ -26,7 +26,7 @@ tags:
 下面是修改后的/etc/network/interface  
 配置生效:service networking restart  
 
-{% highlight shell %}
+{% highlight %}
 auto lo
 auto wlan0 #优先使用wifi
 
