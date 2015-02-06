@@ -1,0 +1,67 @@
+---
+layout: post
+title: java code test
+date: 2015-02-06 13:15
+tags:
+  - life
+---
+
+```java
+public class CollectorResourceObjService {
+
+    @Autowired
+    private MasterDataCache               masterDataCache;
+    @Autowired
+    private ResourceObjServerService      resourceObjServerService;
+    @Autowired
+    private ResourceRTreeObjService       resourceRTreeObjService;
+    @Autowired
+    private ResourceTreeService           resourceTreeService;
+    @Autowired
+    private ResourceObjCommonSplitService resourceObjCommonSplitService;
+
+    /**
+     * 获取所有资源对象的配置
+     * 
+     * @return
+     */
+    public CollectorResourceObjStructureDto getResourceObjStructure() {
+        CollectorResourceObjStructureDto result = new CollectorResourceObjStructureDto();
+
+        // 设备信息
+        Map<Integer, ResourceObjDto> objectMap = new HashMap<Integer, ResourceObjDto>();
+        Collection<ResourceObj4MonitorDto> objList = resourceObjCommonSplitService.getResourceObj().values();
+        Map<Integer, Set<Integer>> rrtoMap = masterDataCache.getResourceObjId2ResourceTreeIdMap();
+        // TreeNode root = resourceTreeService.findTree();
+        for (ResourceObj4MonitorDto ros : objList) {
+            Integer resourceObjId = ros.getId();
+            ResourceObjDto ro = new ResourceObjDto();
+            ro.setResourceId(resourceObjId);
+            ro.setResourceName(ros.getHostName());
+            // parent nodes
+            Integer parentId = null;
+            Set<Integer> parentsRSet = rrtoMap.get(resourceObjId);
+            if (parentsRSet != null) {
+                for (Integer treeNodeId : parentsRSet) {
+                    parentId = treeNodeId;
+                    break;// TODO 多棵树时,这里是list; 节点全路径表示
+                }
+            }
+            ro.setParentId(parentId);
+            objectMap.put(resourceObjId, ro);
+        }
+
+        // version信息
+        String jsonString = JsonUtils.toJsonString(objectMap);
+        String version = Md5Utils.getMD5(jsonString);
+
+        // 组装结果
+        result.setObjectMap(objectMap);
+        result.setVersion(version);
+
+        return result;
+    }
+
+}
+```
+
