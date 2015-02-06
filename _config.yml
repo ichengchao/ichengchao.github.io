@@ -5,7 +5,7 @@ name: "ichengchao"
 
 author: "charles"
 atom-baseurl: "http://chengchao.name"
-
+host: 0.0.0.0
 navigations:
   - title: Archive
     class: fa fa-list-ul

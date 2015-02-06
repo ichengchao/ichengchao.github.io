@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [转]宇宙的刻度
+title: 转摘-宇宙的刻度
 date: 2013-04-28 12:54
 author: charles
 comments: true
