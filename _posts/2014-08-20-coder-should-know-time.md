@@ -17,7 +17,7 @@ tags:
 
 ###文字版###
 
-<code>
+{% highlight sh%}
 L1 cache reference ......................... 0.5 ns
 Branch mispredict ............................ 5 ns
 L2 cache reference ........................... 7 ns
@@ -43,5 +43,5 @@ Credit
 ------
 By Jeff Dean:               http://research.google.com/people/jeff/
 Originally by Peter Norvig: http://norvig.com/21-days.html#answers
-</code>
+{% endhighlight %}
 
