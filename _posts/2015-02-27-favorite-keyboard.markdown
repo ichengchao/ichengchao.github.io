@@ -32,7 +32,7 @@ tags:
 - 苹果笔记本的键盘 (没法跟T60比)
 - Cherry MX-BOARD 2.0(茶轴,黑轴)
 - Filco 104 圣手二代(黑轴)
-- Daskeyboard Model S(青轴)  
+- Daskeyboard Model S(青轴)
 
 <br/>
 ### 个人评价 ###
@@ -43,7 +43,7 @@ tags:
 2. Filco 104 圣手二代(黑轴)
 3. Cherry MX-BOARD 2.0(茶轴)
 4. Cherry MX-BOARD 2.0(黑轴)
-5. 各种薄膜键盘  
+5. 各种薄膜键盘
 
 <br/>
 ### 购买建议 ###
