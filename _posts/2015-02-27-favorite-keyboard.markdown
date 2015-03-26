@@ -41,9 +41,10 @@ tags:
 
 1. Daskeyboard Model S(青轴)
 2. Filco 104 圣手二代(黑轴)
-3. Cherry MX-BOARD 2.0(茶轴)
-4. Cherry MX-BOARD 2.0(黑轴)
-5. 各种薄膜键盘
+3. Daskeyboard 4 Professional(青轴)
+4. Cherry MX-BOARD 2.0(茶轴)
+5. Cherry MX-BOARD 2.0(黑轴)
+6. 各种薄膜键盘
 
 <br/>
 ### 购买建议 ###
@@ -52,4 +53,6 @@ tags:
 如果对机械键盘已经有过尝试,想换一个键盘试试的建议购买Daskeyboard的青轴.  
 对于这款键盘不太满意的地方就是它的体积有点过大以及它的钢琴烤漆的表面.  
 不过胜在打字手感非常不错,真的有点享受的感觉.  
+还有同厂的Daskeyboard 4 Professional,做工非常不错,终于不是钢琴烤漆了.不过键盘上的媒体键感觉有点鸡肋.
+对于Das的产品,个人还是推荐Model S.性价比更高.
 至于购买地址,请自行淘宝.
