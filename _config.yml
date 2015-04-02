@@ -8,7 +8,7 @@ atom-baseurl: "http://chengchao.name"
 host: 0.0.0.0
 navigations:
   - title: Archive
-    class: fa fa-list-ul
+    class: fa fa-list-ul fa-lg
     href: /archive.html
   - title: Tags
     class: fa fa-tags
