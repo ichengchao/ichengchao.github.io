@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [算法]最长公共子序列
+title: 算法:最长公共子序列
 date: 2015-04-02 23:49
 tags:
   - java
