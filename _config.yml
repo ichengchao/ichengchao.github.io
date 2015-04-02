@@ -14,7 +14,7 @@ navigations:
     class: fa fa-tags
     href: /tags.html
   - title: About
-    class: fa fa-user
+    class: fa fa-user-secret
     href: /about.html
   - title: Subscribe
     class: fa fa-rss
