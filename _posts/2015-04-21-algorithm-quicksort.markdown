@@ -78,6 +78,32 @@ public class QuickSort {
         array[low] = middle;
         return low;
     }
+    
+    
+    // *****************************以下这种实现跟动态图更为接近**************************************
+
+    public static int partion2(int[] array, int low, int high) {
+        int middle = array[low];
+        int index = low;
+        low++;
+        while (low < high) {
+            while (low < high && array[high] > middle) {
+                high--;
+            }
+            while (low < high && array[low] < middle) {
+                low++;
+            }
+            if (low == high) {
+                break;
+            } else {
+                exchangeElements(array, low, high);
+            }
+
+        }
+        // 放置中轴
+        exchangeElements(array, low, index);
+        return low;
+    }
 
     /**
      * 把array中的index1和index2的内容互换
