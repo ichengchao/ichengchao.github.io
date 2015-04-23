@@ -21,6 +21,7 @@ layout: default
     </span>
     {% endif %}
     </section>
+	<br/>
     <section class="post">
     {{ post.content }}
     </section>
