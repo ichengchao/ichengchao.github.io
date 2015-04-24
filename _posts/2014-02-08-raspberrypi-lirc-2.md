@@ -4,7 +4,7 @@ title: 树莓派的红外发射
 date: 2014-02-08 17:49
 tags:
   - raspberrypi
-   - lirc
+  - lirc
 
 ---
 接着上篇,这篇说说红外发射
