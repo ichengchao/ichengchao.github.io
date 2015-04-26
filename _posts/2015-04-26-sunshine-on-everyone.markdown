@@ -8,7 +8,7 @@ tags:
   
 ---
 
-![keyboard](http://ascii-table.com/img/keyboard-103P.png)  
+![sunshine](http://7vii66.com1.z0.glb.clouddn.com/vladstudio_windows7_alt_default_wallpaper_480x272.jpg)  
 
 >这是1999年《南方周末》新年贺词  
 >第一次听到是在王利芬的<我们>栏目中.非常感动!  
