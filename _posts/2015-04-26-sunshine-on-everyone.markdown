@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: 阳光打在你的脸上
 date: 2015-04-26 23:52
@@ -8,6 +8,7 @@ tags:
   
 ---
 
+![keyboard](http://ascii-table.com/img/keyboard-103P.png)  
 
 >这是1999年《南方周末》新年贺词  
 >第一次听到是在王利芬的<我们>栏目中.非常感动!  
