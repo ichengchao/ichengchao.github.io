@@ -3,7 +3,7 @@ layout: post
 title: linux下的端口映射
 date: 2015-05-05 10:13
 tags:
-  - tech 
+  - tech
   
 ---
 
@@ -11,7 +11,7 @@ tags:
 不过由于规定应用要用admin用户启动,所以需要做一个端口映射.  
 网上搜寻一番,发现rinted这个东西完全符合需求,而且配置异常简单.  
 [http://www.boutell.com/rinetd/](http://www.boutell.com/rinetd/) 
-{% highlight ruby %} 
+{% highlight java %}
 wget  http://www.boutell.com/rinetd/http/rinetd.tar.gz
 tar fxz rinetd.tar.gz
 cd rinetd
