@@ -11,13 +11,14 @@ tags:
  - repaste
 ---
 
+{% highlight java %}
 Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定义的几个注解，如：@Resource、 @PostConstruct及@PreDestroy。
 
-<strong>1. @Autowired</strong>
+1. @Autowired
     @Autowired是Spring 提供的，需导入
     Package:org.springframework.beans.factory.annotation.Autowired;
     只按照byType 注入。
-<strong>2. @Resource</strong>
+2. @Resource
     @Resource默认按 byName 自动注入,是J2EE提供的， 需导入Package:  
     javax.annotation.Resource;
     @Resource有两个中重要的属性：name和type ，而Spring将@Resource注解的name属性解析为bean的
@@ -32,7 +33,7 @@ Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定
 　 (4). 如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一
     个原始类型进行匹配，如果匹配则自动装配；
     @Resource的作用相当于@Autowired，只不过@Autowired按byType自动注入。
-<strong>3. 使用区别</strong>
+3. 使用区别
     @Resource(name="loginService") 
     private LoginService loginService;
 
@@ -58,3 +59,4 @@ Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定
 如果将@requied或者@autowired写了set方法之上，则程序会走到set方法内部。
 
 但如果写在了field之上，则不会进入set方法当中。
+{% endhighlight %}
