@@ -11,8 +11,8 @@ tags:
  - repaste
 ---
 
+转摘:  
 {% highlight java %}
-
 Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定义的几个注解，如：@Resource、 @PostConstruct及@PreDestroy。
 
 1. @Autowired
