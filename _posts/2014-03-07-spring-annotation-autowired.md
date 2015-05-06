@@ -12,6 +12,7 @@ tags:
 ---
 
 {% highlight java %}
+
 Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定义的几个注解，如：@Resource、 @PostConstruct及@PreDestroy。
 
 1. @Autowired
@@ -58,5 +59,6 @@ Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定
 
 如果将@requied或者@autowired写了set方法之上，则程序会走到set方法内部。
 
-但如果写在了field之上，则不会进入set方法当中。
+但如果写在了field之上，则不会进入set方法当中。  
+
 {% endhighlight %}
