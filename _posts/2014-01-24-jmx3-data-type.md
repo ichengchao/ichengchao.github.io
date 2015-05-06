@@ -15,7 +15,7 @@ jmx支持吗?
 答案是肯定的.
 那就写代码试试吧:
 
-[code lang="java"]
+{% highlight java %}
 //一个简单的数据类
 public class MyDataType {
     private String name;
@@ -78,17 +78,17 @@ public class DataType implements DataTypeMBean {
         Thread.sleep(Long.MAX_VALUE);
     }
 }
-[/code]
+{% endhighlight %}
 
-<img class="alignnone size-full wp-image-263" alt="datatype" src="http://www.chengchao.name/wordpress/wp-content/uploads/2014/01/datatype.jpg" width="729" height="273" />
 打开jconsole验证一下,发现有点问题,只要是自定义的类型显示了不可用.看来这条路子是走不通了.google之.发现jmx支持opentype
 
 主要是用到两个类:
 CompositeData:支持自定义类型
 TabularData:CompositeData集合
 
-对应上面的例子改造一下:
-[code lang="java"]
+对应上面的例子改造一下:  
+
+{% highlight java %}
 //MBean接口的改造
 public interface DataTypeMBean {
 
@@ -159,4 +159,4 @@ public class DataType implements DataTypeMBean {
     }
 }
 
-[/code]
+{% endhighlight %}
