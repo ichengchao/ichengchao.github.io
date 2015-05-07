@@ -41,7 +41,7 @@ iface wlan0 inet static
         address 192.168.1.98
         netmask 255.255.255.0
         gateway 192.168.1.1
-        wpa-ssid &quot;wifi名称&quot;
-        wpa-psk &quot;wifi密码&quot;
+        wpa-ssid "wifi名称"
+        wpa-psk "wifi密码"
 allow-hotplug wlan0 #表示可以热插拔
 ```

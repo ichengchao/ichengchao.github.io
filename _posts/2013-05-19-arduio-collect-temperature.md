@@ -53,7 +53,7 @@ void setup() {
  
   // start the Ethernet connection:
   if (Ethernet.begin(mac) == 0) {
-    //Serial.println(&quot;Failed to configure Ethernet using DHCP&quot;);
+    //Serial.println("Failed to configure Ethernet using DHCP");
     // no point in carrying on, so do nothing forevermore:
     for(;;)
       ;
@@ -68,7 +68,7 @@ void loop()
   char buffer[25];
   String tempStr = floatToString(buffer,temp,2); //arduino比较变态的的类型转换
   if (client.connect(server, 8080)) {
-    client.println(&quot;GET /sendTempData.htm?key=securityKey&amp;tempNum=&quot;+tempStr);
+    client.println("GET /sendTempData.htm?key=securityKey&tempNum="+tempStr);
     client.println();
   } 
   delay(1000);

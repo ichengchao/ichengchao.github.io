@@ -75,6 +75,7 @@ public class Main {
 
 <strong>4.外部调用</strong>
 在vm 参数中增加:
+
 ```java
 -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.authenticate=false 
@@ -86,6 +87,7 @@ public class Main {
 打开jconsole,在远程进程中输入127.0.0.1:1100,直接进入管理界面
 
 代码外部调用  
+
 ```java
 public class RemoteMBean {
 

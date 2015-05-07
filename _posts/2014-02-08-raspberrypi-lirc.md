@@ -46,9 +46,9 @@ mode2 -d /dev/lirc0
 配置一下/etc/hardware.conf
 
 #其余的不用配置
-LIRCD_ARGS=&quot;--uinput&quot;
-DRIVER=&quot;default&quot;
-DEVICE=&quot;/dev/lirc0&quot;
+LIRCD_ARGS="--uinput"
+DRIVER="default"
+DEVICE="/dev/lirc0"
 
 
 <strong>录制按键:</strong>
@@ -68,7 +68,7 @@ sudo mv ~/lircd.conf /etc/lirc/lircd.conf
 
 
 # Please make this file available to others
-# by sending it to &lt;lirc@bartelmus.de&gt;
+# by sending it to <lirc@bartelmus.de>
 #
 # this config file was automatically generated
 # using lirc-0.9.0-pre1(default) on Fri Feb  7 14:20:44 2014
@@ -131,12 +131,12 @@ lircrc内容:
 begin
     prog = irexec
     button = KEY_1
-    config = echo &quot;hello lirc one!&quot;
+    config = echo "hello lirc one!"
 end
 begin
     prog = irexec
     button = KEY_2
-    config = echo &quot;hello lirc two!&quot;
+    config = echo "hello lirc two!"
 end
 
 
@@ -169,7 +169,7 @@ end
 import pylirc
 
 #初始化,这个的myapp需要和lircrc中的prog的名称一致
-pylirc.init(&quot;myapp&quot;, &quot;/etc/lirc/lircrc&quot;, 1)
+pylirc.init("myapp", "/etc/lirc/lircrc", 1)
 
 #设置成阻塞模式
 pylirc.blocking(1)

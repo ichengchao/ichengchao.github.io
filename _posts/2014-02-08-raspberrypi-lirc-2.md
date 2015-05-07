@@ -25,9 +25,10 @@ cat /sys/kernel/debug/gpio
 
 
 完成后测试一下:
+
 ```sh
 //看看有什么命令
-irsend LIST tv &quot;&quot;
+irsend LIST tv ""
 
 //挑一个试试
 irsend SEND_ONCE tv KEY_1

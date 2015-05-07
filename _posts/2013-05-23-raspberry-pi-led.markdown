@@ -35,6 +35,6 @@ class hello:
         if not name:
                 name = 'World'
         return 'Hello, ' + name + '!'
-if __name__ == &quot;__main__&quot;:
+if __name__ == "__main__":
     app.run()
 ```

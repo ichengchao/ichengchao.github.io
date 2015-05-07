@@ -107,15 +107,15 @@ if __name__ == "__main__":
         <h2>Welcome to smart world!</h2>
         <br />
         <button onclick="httpquery('moveright');">Move Right</button>
-        &amp;nbsp;
+        &nbsp;
         <button onclick="httpquery('moveleft');">Move Left</button>
-        &amp;nbsp;
+        &nbsp;
         <button onclick="httpquery('take');">Take Photo</button>
-        &amp;nbsp;
+        &nbsp;
         <button onclick="refreshIframe();">Refresh</button>
-        &amp;nbsp;
+        &nbsp;
         <button onclick="httpquery('on');">On</button>
-        &amp;nbsp;
+        &nbsp;
         <button onclick="httpquery('off');">off</button>
         <br />
         <hr />

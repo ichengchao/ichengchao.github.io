@@ -28,7 +28,7 @@ logfile ~/.msmtp.log
 
 <strong>发封邮件试试:</strong>
 [code lang="shell"]
-echo &quot;hello&quot; | msmtp -a default QQ号码@qq.com
+echo "hello" | msmtp -a default QQ号码@qq.com
 [/code]
 
 登录qq邮箱看看,应该收到了一封无主题的邮件.
@@ -58,11 +58,11 @@ QQ邮件比较恶心,目前还不知道怎么配置,网上能搜索到的方法�
 sudo apt-get install mutt
 
 //在home目录增加.muttrc,内容如下(具体路径用which mutt查看):
-set sendmail=&quot;/usr/bin/msmtp&quot;
+set sendmail="/usr/bin/msmtp"
 
 //发送测试邮件
 
-echo &quot;hello,mutt&quot; |mutt -s &quot;my_title&quot; QQ号码@qq.com
+echo "hello,mutt" |mutt -s "my_title" QQ号码@qq.com
 [/code]
 
 

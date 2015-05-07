@@ -32,6 +32,7 @@ tags:
 
 新建一个index.html和index.js  
 index.html
+
 ```html
 <html>
 <head>

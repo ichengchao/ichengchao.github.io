@@ -37,9 +37,9 @@ public class MyDataType {
 //定义一个MBean
 public interface DataTypeMBean {
     int getCount();
-    List&lt;String&gt; getNames();
+    List<String> getNames();
     MyDataType getMyDataType();
-    List&lt;MyDataType&gt; getMyDataTypeList();
+    List<MyDataType> getMyDataTypeList();
 }
 
 //定义一个实现类
@@ -49,32 +49,32 @@ public class DataType implements DataTypeMBean {
         return 2014;
     }
     @Override
-    public List&lt;String&gt; getNames() {
-        return Arrays.asList(&quot;happy&quot;, &quot;new&quot;, &quot;year&quot;);
+    public List<String> getNames() {
+        return Arrays.asList("happy", "new", "year");
     }
     @Override
     public MyDataType getMyDataType() {
         MyDataType dataType = new MyDataType();
         dataType.setAge(10);
-        dataType.setName(&quot;lucy&quot;);
+        dataType.setName("lucy");
         return dataType;
     }
     @Override
-    public List&lt;MyDataType&gt; getMyDataTypeList() {
+    public List<MyDataType> getMyDataTypeList() {
         MyDataType lucy = new MyDataType();
         lucy.setAge(10);
-        lucy.setName(&quot;lucy&quot;);
+        lucy.setName("lucy");
         MyDataType lily = new MyDataType();
         lily.setAge(11);
-        lily.setName(&quot;lily&quot;);
+        lily.setName("lily");
         return Arrays.asList(lucy,lily);
     }
     public static void main(String[] args) throws Exception {
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-        ObjectName name = new ObjectName(&quot;name.chengchao:type=DataType&quot;);
+        ObjectName name = new ObjectName("name.chengchao:type=DataType");
         DataType mbean = new DataType();
         mBeanServer.registerMBean(mbean, name);
-        System.out.println(&quot;started...&quot;);
+        System.out.println("started...");
         Thread.sleep(Long.MAX_VALUE);
     }
 }
@@ -94,7 +94,7 @@ public interface DataTypeMBean {
 
     int getCount();
 
-    List&lt;String&gt; getNames();
+    List<String> getNames();
 
     CompositeData getMyDataType() throws Exception;
 
@@ -110,51 +110,51 @@ public class DataType implements DataTypeMBean {
     }
 
     @Override
-    public List&lt;String&gt; getNames() {
-        return Arrays.asList(&quot;happy&quot;, &quot;new&quot;, &quot;year&quot;);
+    public List<String> getNames() {
+        return Arrays.asList("happy", "new", "year");
     }
 
     @Override
     public CompositeData getMyDataType() throws Exception {
-        String[] itemNames = { &quot;name&quot;, &quot;age&quot; };
-        OpenType&lt;?&gt;[] openTypes = new OpenType[] { SimpleType.STRING, SimpleType.INTEGER };
-        CompositeType compositeType = new CompositeType(&quot;MyDataType&quot;, &quot;my dataType test&quot;, itemNames, itemNames,
+        String[] itemNames = { "name", "age" };
+        OpenType<?>[] openTypes = new OpenType[] { SimpleType.STRING, SimpleType.INTEGER };
+        CompositeType compositeType = new CompositeType("MyDataType", "my dataType test", itemNames, itemNames,
                                                         openTypes);
-        Object[] items = { &quot;lucy&quot;, 10 };
+        Object[] items = { "lucy", 10 };
         CompositeData dataType = new CompositeDataSupport(compositeType, itemNames, items);
         // MyDataType dataType = new MyDataType();
         // dataType.setAge(10);
-        // dataType.setName(&quot;lucy&quot;);
+        // dataType.setName("lucy");
         return dataType;
     }
 
     @Override
     public TabularData getMyDataTypeList() throws Exception{
-        String[] itemNames = { &quot;name&quot;, &quot;age&quot; };
-        OpenType&lt;?&gt;[] openTypes = new OpenType[] { SimpleType.STRING, SimpleType.INTEGER };
-        CompositeType compositeType = new CompositeType(&quot;MyDataType&quot;, &quot;my dataType test&quot;, itemNames, itemNames,
+        String[] itemNames = { "name", "age" };
+        OpenType<?>[] openTypes = new OpenType[] { SimpleType.STRING, SimpleType.INTEGER };
+        CompositeType compositeType = new CompositeType("MyDataType", "my dataType test", itemNames, itemNames,
                                                         openTypes);
-        TabularType tabularType = new TabularType(&quot;MyDataListType&quot;, &quot;my dataType List test&quot;, compositeType, itemNames);
+        TabularType tabularType = new TabularType("MyDataListType", "my dataType List test", compositeType, itemNames);
         TabularData tabularData = new TabularDataSupport(tabularType);
-        CompositeData lucy = new CompositeDataSupport(compositeType, itemNames, new Object[]{&quot;lucy&quot;, 10});
-        CompositeData lily = new CompositeDataSupport(compositeType, itemNames, new Object[]{&quot;lily&quot;, 11});
+        CompositeData lucy = new CompositeDataSupport(compositeType, itemNames, new Object[]{"lucy", 10});
+        CompositeData lily = new CompositeDataSupport(compositeType, itemNames, new Object[]{"lily", 11});
         tabularData.put(lucy);
         tabularData.put(lily);
 //        MyDataType lucy = new MyDataType();
 //        lucy.setAge(10);
-//        lucy.setName(&quot;lucy&quot;);
+//        lucy.setName("lucy");
 //        MyDataType lily = new MyDataType();
 //        lily.setAge(11);
-//        lily.setName(&quot;lily&quot;);
+//        lily.setName("lily");
         return tabularData;
     }
 
     public static void main(String[] args) throws Exception {
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
-        ObjectName name = new ObjectName(&quot;name.chengchao:type=DataType&quot;);
+        ObjectName name = new ObjectName("name.chengchao:type=DataType");
         DataType mbean = new DataType();
         mBeanServer.registerMBean(mbean, name);
-        System.out.println(&quot;started...&quot;);
+        System.out.println("started...");
         Thread.sleep(Long.MAX_VALUE);
     }
 }

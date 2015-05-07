@@ -37,7 +37,7 @@ public class MySimpleMessageListener implements SimpleMessageListener {
     public void deliver(String from, String recipient, InputStream data) throws Exception {
         // System.out.println(from);
         // System.out.println(recipient);
-        // System.out.println(&quot;===================================&quot;);
+        // System.out.println("===================================");
         // String body = this.convertStreamToString(data);
         Session session = Session.getInstance(new Properties(), null);
         try {

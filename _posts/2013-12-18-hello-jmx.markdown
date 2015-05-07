@@ -31,7 +31,7 @@ public class MyTest implements MyTestMBean {
     }
     @Override
     public String sayHello(String name) {
-        return &quot;hello,&quot; + name;
+        return "hello," + name;
     }
     @Override
     public void changeName(String name) {
@@ -59,18 +59,17 @@ public interface MyTestMBean {
   
   
 写个测试类试试:Main.java
----
-<br/>
+
 ```java
 public class Main {
     public static void main(String args[]) throws Exception {
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
         // 包名加类名 创建一个ObjectName
-        ObjectName name = new ObjectName(&quot;name.chengchao:type=MyTest&quot;);
+        ObjectName name = new ObjectName("name.chengchao:type=MyTest");
         MyTest mbean = new MyTest();
         // 注册MBean
         mBeanServer.registerMBean(mbean, name);
-        System.out.println(&quot;started...&quot;);
+        System.out.println("started...");
         Thread.sleep(Long.MAX_VALUE);
     }
 

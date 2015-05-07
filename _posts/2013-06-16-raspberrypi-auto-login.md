@@ -9,11 +9,13 @@ tags:
  - tech
  
 ---
-<ul>
-	<li>sudo vi /etc/inittab</li>
-	<li>找到行 1:2345:respawn:/sbin/getty 115200 tty1</li>
-	<li>注释这行: #1:2345:respawn:/sbin/getty 115200 tty1</li>
-	<li>增加一行 1:2345:respawn:/bin/login -f pi tty1 /dev/tty1 2&gt;&amp;1</li>
-	<li>保存并退出,reboot试试.</li>
-</ul>
+
+```sh
+sudo vi /etc/inittab
+#找到行并注释掉
+#1:2345:respawn:/sbin/getty 115200 tty1
+#增加一行 
+1:2345:respawn:/bin/login -f pi tty1 /dev/tty1 2>&1
+#保存并退出,reboot试试.
+```
 大功告成.终于可以不用外接键盘了.启动后,直接ssh
