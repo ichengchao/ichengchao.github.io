@@ -15,7 +15,7 @@ tags:
 我的树莓派的rc.local看起来是这样的:  
 
 
-{% highlight sh%}
+```sh
 #!/bin/sh -e
 #
 # rc.local

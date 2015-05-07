@@ -28,7 +28,7 @@ F12看了一下控制台输出,大概意思是:  **脚本因 mime 类型不匹�
 
 知道解决方案就很简单了.
 配置httpd.conf
-{% highlight xml %}
+```xml
 <IfModule mod_headers.c>
 #       Header set X-Content-Type-Options "nosniff"
 		Header set X-XSS-protection "mode=block"

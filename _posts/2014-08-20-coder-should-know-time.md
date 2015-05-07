@@ -17,7 +17,7 @@ tags:
 
 ###文字版###
 
-{% highlight sh%}
+```sh
 L1 cache reference ......................... 0.5 ns
 Branch mispredict ............................ 5 ns
 L2 cache reference ........................... 7 ns

@@ -32,7 +32,7 @@ tags:
 
 新建一个index.html和index.js  
 index.html
-{% highlight html %}
+```html
 <html>
 <head>
 	<link rel="stylesheet" type="text/css"	href="extjslibv4/resources/css/ext-all.css" />
@@ -45,7 +45,7 @@ index.html
 ```
 
 index.js
-{% highlight javascript %}
+```js
 Ext.onReady(function() {
 			Ext.MessageBox.alert('Hello', 'extjs.');
 		})

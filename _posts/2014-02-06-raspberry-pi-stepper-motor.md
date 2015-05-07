@@ -11,7 +11,7 @@ tags:
 
 ###控制代码###
 
-{% highlight python %}
+```python
 #http 服务使用web.py实现
 import web
 import RPi.GPIO as GPIO
@@ -79,7 +79,7 @@ if __name__ == "__main__":
 <br/>
 ###页面代码###
 
-{% highlight html %}
+```html
 <html>
 <head>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>

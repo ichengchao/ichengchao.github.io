@@ -31,7 +31,7 @@ tags:
 模拟口的数值从0~1024对应输入电压0~5v  
 所以输入电压的计算公式为: (5/1024)*in,单位是v  
 换算成温度就是((5/1024)*in)/0.01  
-{% highlight c %}
+```c
 int in = analogRead(A0);    //读取A0口的电压值
 float temp = ((5/1024)*in)/0.01 //计算温度
 ```
@@ -39,7 +39,7 @@ float temp = ((5/1024)*in)/0.01 //计算温度
 随后只要将采集的数据发送到服务器保留起来就大功告成了.  
 完整的代码(从ide的example中改改就行了):  
 
-{% highlight c %}
+```c
 #include <SPI.h>
 #include <Ethernet.h>
 #include <FloatToString.h>

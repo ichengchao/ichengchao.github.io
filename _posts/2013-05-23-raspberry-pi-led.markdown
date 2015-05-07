@@ -16,7 +16,7 @@ web控制led
 
 代码(非常简单):
 
-{% highlight python %}
+```python
 import web
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
