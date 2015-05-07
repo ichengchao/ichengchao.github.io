@@ -9,7 +9,7 @@ tags:
 ---
 接着上篇,这篇说说红外发射
 
-{% highlight java %}
+```sh
 //上篇中的绑定命令是这样的,默认发射用的是GPIO17:
 sudo modprobe lirc_rpi
 
@@ -21,17 +21,17 @@ sudo modprobe lirc_rpi gpio_in_pin=17 gpio_out_pin=18
 //查看绑定情况:
 mount -t debugfs debugfs /sys/kernel/debug
 cat /sys/kernel/debug/gpio 
-{% endhighlight %}
+```
 
 
 完成后测试一下:
-{% highlight java %}
+```sh
 //看看有什么命令
 irsend LIST tv &quot;&quot;
 
 //挑一个试试
 irsend SEND_ONCE tv KEY_1
-{% endhighlight %}
+```
 
 总结:
 试了几样家里的电器,发现华数的机顶盒,电风扇是可以正常工作的.乐视电视不行

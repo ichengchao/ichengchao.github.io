@@ -18,7 +18,7 @@ JMX(Java Management Extensions,Java管理扩展)
 ---
 <br/>
 
-{% highlight java %}
+```java
 public class MyTest implements MyTestMBean {
     private String name = "world";
     @Override
@@ -38,7 +38,7 @@ public class MyTest implements MyTestMBean {
         setName(name);
     }
 }
-{% endhighlight %}
+```
   
   
 把想暴露的方法封装成一个接口
@@ -48,20 +48,20 @@ public class MyTest implements MyTestMBean {
 - 接口的名称必须是类名+MBean,这里就是MyTestMBean.java
 - 修饰符必须是public,interface的默认public abstract 是不行的.
 
-{% highlight java %}
+```java
 public interface MyTestMBean {
     String getName();
     void setName(String name);
     String sayHello(String name);
     void changeName(String name);
 }
-{% endhighlight %}
+```
   
   
 写个测试类试试:Main.java
 ---
 <br/>
-{% highlight java %}
+```java
 public class Main {
     public static void main(String args[]) throws Exception {
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
@@ -75,7 +75,7 @@ public class Main {
     }
 
 }
-{% endhighlight %}
+```
   
   
 打开jconsole

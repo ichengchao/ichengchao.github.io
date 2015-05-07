@@ -37,4 +37,4 @@ class hello:
         return 'Hello, ' + name + '!'
 if __name__ == &quot;__main__&quot;:
     app.run()
-{% endhighlight %}
+```

@@ -12,7 +12,7 @@ tags:
 ###主要有三个类:###
 
 - Node.java 二叉树的java model
-{% highlight java %}
+```java
 public class Node {
  
     Node     left  = null;
@@ -60,17 +60,17 @@ public class Node {
     }
  
 }
-{% endhighlight %}
+```
 
 - NodeType.java 节点的枚举类型,四则运算中有数字和运算符两种
-{% highlight java %}
+```java
 public enum NodeType {
     num, op;
 }
-{% endhighlight %}
+```
 
 - Parser.java 关键类,paser的实现
-{% highlight java %}
+```java
 public class Parser {
  
     private char[] ca;
@@ -215,10 +215,10 @@ public class Parser {
         throw new RuntimeException("3");
     }
 }
-{% endhighlight %}
+```
 
 - ParserTest.java 测试
-{% highlight java %}
+```java
 public class ParserTest extends TestCase {
  
     public void test_getResult() {
@@ -258,7 +258,7 @@ public class ParserTest extends TestCase {
     }
  
 }
-{% endhighlight %}
+```
 
 <!--
 <script src="https://gist.github.com/ichengchao/ee5f06f0ee03766dc750.js"></script>

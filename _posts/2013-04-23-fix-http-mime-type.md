@@ -34,5 +34,5 @@ F12看了一下控制台输出,大概意思是:  **脚本因 mime 类型不匹�
 		Header set X-XSS-protection "mode=block"
 		RequestHeader unset Range
 </IfModule>
-{% endhighlight %}
+```
 搞定!

@@ -8,7 +8,7 @@ tags:
 ---
 
 
-{% highlight java %}
+```java
 public class BlockingQueue {
     private List queue = new LinkedList();
     private int  limit = 10;
@@ -37,5 +37,5 @@ public class BlockingQueue {
     }
     
 }
-{% endhighlight %}
+```
 

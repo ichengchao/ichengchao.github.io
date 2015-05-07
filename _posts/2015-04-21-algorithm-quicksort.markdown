@@ -18,7 +18,7 @@ tags:
 
 ### 代码示例 ###
 
-{% highlight java %}
+```java
 public class QuickSort {
 
     public static void main(String[] args) {
@@ -129,4 +129,4 @@ public class QuickSort {
 
 }
 
-{% endhighlight %}
+```

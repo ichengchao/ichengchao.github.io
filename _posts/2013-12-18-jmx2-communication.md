@@ -19,7 +19,7 @@ tags:
 
 <strong>2.同一个jvm下用代码访问:</strong>
 
-{% highlight java %}
+```java
 MBeanServer mbeanServer = ManagementFactory.getPlatformMBeanServer();
 ObjectName objectName = new ObjectName("name.chengchao:type=MyTest");
 //相当于调用getName方法
@@ -31,20 +31,20 @@ mbeanServer.setAttribute(objectName, attribute);
 Object opParams[] = { "niubi" };
 String signature[] = { String.class.getName() };
 String sayHello = (String) mbeanServer.invoke(objectName, "sayHello", opParams, signature);
-{% endhighlight %}
+```
 
 <strong>3.写一个adapterServer,这里用的的是HtmlAdaptorServer</strong>
 
-{% highlight java %}
+```xml
 <!-- pom.xml添加依赖 -->
 <dependency>
 	<groupId>org.glassfish.external</groupId>
 	<artifactId>opendmk_jdmkrt_jar</artifactId>
 	<version>1.0-b01-ea</version>
 </dependency>
-{% endhighlight %}  
+```  
 
-{% highlight java %}
+```java
 public class Main {
 
     public static void main(String args[]) throws Exception {
@@ -68,26 +68,25 @@ public class Main {
     }
 
 }
-{% endhighlight %}
+```
 
 打开浏览器: http://localhost:10000
 可以看到一个web版的mbean管理界面,操作基本和jconsole类似
 
 <strong>4.外部调用</strong>
 在vm 参数中增加:
-{% highlight java %}
+```java
 -Dcom.sun.management.jmxremote 
 -Dcom.sun.management.jmxremote.authenticate=false 
 -Dcom.sun.management.jmxremote.ssl=false 
 -Dcom.sun.management.jmxremote.port=1100
 -Djava.rmi.server.hostname=127.0.0.1
-{% endhighlight %}
+```
 
 打开jconsole,在远程进程中输入127.0.0.1:1100,直接进入管理界面
 
-<strong>5.代码外部调用</strong>
-
-{% highlight java %}
+代码外部调用  
+```java
 public class RemoteMBean {
 
     public static void main(String[] args) throws Exception {
@@ -101,7 +100,7 @@ public class RemoteMBean {
 
 }
 
-{% endhighlight %}
+```
 
 
 <strong>附加:jetty开启jmx</strong>

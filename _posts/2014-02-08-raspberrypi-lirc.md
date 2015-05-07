@@ -20,7 +20,7 @@ gnd:gnd
 vcc:5v
 发送命令举例(与本文无关):
 
-{% highlight java %}
+```sh
 irsend SEND_ONCE tv KEY_1
 irsend SEND_ONCE tv KEY_POWER
 
@@ -177,7 +177,7 @@ pylirc.blocking(1)
 #按下按键就能看到对应的config值,如果没有匹配的key则显示为None
 print pylirc.nextcode()
 
-{% endhighlight %}
+```
 
 
 至此,就介绍完了红外控制树莓派的方法.就等你发挥你的想象力,be fun!

@@ -23,7 +23,7 @@ tags:
 
 ### 代码示例 ###
 
-{% highlight java %}
+```java
 package javaTest;
 
 import junit.framework.Assert;
@@ -169,7 +169,7 @@ public class LCS {
     }
 
 }
-{% endhighlight %}
+```
 <!--
 <script src="https://gist.github.com/ichengchao/517721eed0cc29e7c2a5.js"></script>
 -->

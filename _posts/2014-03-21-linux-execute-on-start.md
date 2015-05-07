@@ -38,7 +38,7 @@ fi
 printf &quot;hello,my first run&quot;
 
 exit 0
-{% endhighlight %}
+```
 
 
 

@@ -11,7 +11,7 @@ comments: true
 项目名称是:subethasmtp,地址:<https://code.google.com/p/subethasmtp/>  
 用起来也非常方便.  
 
-{% highlight java %}
+```java
 //启动邮件服务器
 public void startMailServer() {
         try {
@@ -50,7 +50,7 @@ public class MySimpleMessageListener implements SimpleMessageListener {
         }
     }
 }
-{% endhighlight %}
+```
 
 
 如何测试:  

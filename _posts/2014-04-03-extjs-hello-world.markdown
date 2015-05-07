@@ -42,14 +42,14 @@ index.html
 <body>
 </body>
 </html>
-{% endhighlight %}
+```
 
 index.js
 {% highlight javascript %}
 Ext.onReady(function() {
 			Ext.MessageBox.alert('Hello', 'extjs.');
 		})
-{% endhighlight %}
+```
 
 运行浏览器,输入地址 http://localhost/index.html  
 至此,extjs的hello world就结束了.是不是还比较简单啊.

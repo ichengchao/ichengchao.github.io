@@ -75,7 +75,7 @@ if __name__ == "__main__":
     app.run()
 	
 	
-{% endhighlight %}
+```
 <br/>
 ###页面代码###
 
@@ -126,4 +126,4 @@ if __name__ == "__main__":
 </body>
 </html>
 
-{% endhighlight %}
+```

@@ -13,7 +13,7 @@ tags:
 
 转摘:
 
-{% highlight java %}
+```java
 
 Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定义的几个注解  
 如：@Resource、 @PostConstruct及@PreDestroy。
@@ -64,4 +64,4 @@ Spring不但支持自己定义的@Autowired注解，还支持由JSR-250规范定
 
 但如果写在了field之上，则不会进入set方法当中。  
 
-{% endhighlight %}
+```

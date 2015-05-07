@@ -43,5 +43,5 @@ Credit
 ------
 By Jeff Dean:               http://research.google.com/people/jeff/
 Originally by Peter Norvig: http://norvig.com/21-days.html#answers
-{% endhighlight %}
+```
 

@@ -12,7 +12,7 @@ tags:
 
 在java中经常需要获取资源文件,常用的方式就是:
 
-{% highlight java %}
+```java
 
 //这是获取在Test.java所在目录的的a.txt
 URL url = Test.class.getResource("a.txt");
@@ -39,7 +39,7 @@ request.getSession().getServletContext().getRealPath("/");
 //获取lib的目录的路径.
 request.getSession().getServletContext().getRealPath("/WEB-INF/lib");
 
-{% endhighlight %}
+```
 
 当然还有getResourceAsStream等方法,不过道理都是一样的.
 例子的注释写得恶心了点,不过还是能看的.

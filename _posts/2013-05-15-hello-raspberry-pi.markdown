@@ -44,4 +44,4 @@ iface wlan0 inet static
         wpa-ssid &quot;wifi名称&quot;
         wpa-psk &quot;wifi密码&quot;
 allow-hotplug wlan0 #表示可以热插拔
-{% endhighlight %}
+```
