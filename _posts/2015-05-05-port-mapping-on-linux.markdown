@@ -12,22 +12,20 @@ tags:
 网上搜寻一番,发现rinted这个东西完全符合需求,而且配置异常简单.  
 [http://www.boutell.com/rinetd/](http://www.boutell.com/rinetd/) 
 
-{% highlight java %}
-
+```sh
 wget  http://www.boutell.com/rinetd/http/rinetd.tar.gz
 tar fxz rinetd.tar.gz
 cd rinetd
 make
 make install
 
-//配置文件
+#配置文件
 vi /etc/rinetd.conf 
 0.0.0.0 25 0.0.0.0 25000
 
-//启动
+#启动
 rinetd -c /etc/rinetd.conf
 
-//检查,看看25000端口是否已经开启
+#检查,看看25000端口是否已经开启
 netstat -nap|grep LISTEN
-
-{% endhighlight %}
+```
