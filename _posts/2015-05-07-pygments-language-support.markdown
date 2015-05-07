@@ -10,7 +10,7 @@ tags:
 
 >今天把jekyll的引擎从rdiscount换成了redcarpet  
 >终于不用使用恶心的大括号来高亮code了.由于经常需要查找pygments支持的语言  
->就把pygments支持的语言贴在这边方便查找.
+>就把pygments支持的语言贴在这边方便查找.  
 >btw:pygments.org这个网站经常性的打不开
 
 
@@ -63,7 +63,7 @@ class pygments.lexers.actionscript.MxmlLexer
 Short names:	mxml
 Filenames:	*.mxml
 MIME types:	None
-For MXML markup. Nested AS3 in <script> tags is highlighted by the appropriate lexer.
+For MXML markup. Nested AS3 in script tags is highlighted by the appropriate lexer.
 
 New in version 1.1.
 
