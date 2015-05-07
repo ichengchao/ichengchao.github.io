@@ -1,12 +1,13 @@
 ---
-layout:post
-title:pygments的高亮语法支持
-date:2015-05-0722:17
+layout: post
+title: pygments的高亮语法支持
+date: 2015-05-07 22:17
 tags:
   - jekyll
   - blog
   
 ---
+
 
 >今天把jekyll的引擎从rdiscount换成了redcarpet  
 >终于不用使用恶心的大括号来高亮code了.由于经常需要查找pygments支持的语言  
