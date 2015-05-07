@@ -8,7 +8,7 @@ tags:
   
 ---
 
-![jekyll](http://jekyllrb.com/img/logo-2x.png)
+![jekyll](http://chengchao.name/resource-container/image/logo-jekyll.png)
 
 虽然jekyll本身就提供了原生的迁移工具,但我觉得还是太麻烦了.  
 上网搜寻了一下,找到一个很轻量级的从wordpress的xml文件生成jekyll的markdown文件  

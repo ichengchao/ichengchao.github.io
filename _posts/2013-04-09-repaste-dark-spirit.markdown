@@ -10,7 +10,7 @@ tags:
 
 
 
-![dark-sprite](http://7vii66.com1.z0.glb.clouddn.com/2013-04-09-repaste-dark-spirit.jpg) 
+![dark-sprite](http://chengchao.name/resource-container/image/dark-spirit.jpg) 
 
 声明：本文内容禁止讲给16岁以下的小朋友听，以免吓坏小朋友。  
 出于保护当事人的原因，禁止任何人在任何时候以任何理由向我打听其人其事，我不会做出任何回复。  

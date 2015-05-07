@@ -8,7 +8,7 @@ tags:
   
 ---
 
-![keyboard](http://ascii-table.com/img/keyboard-103P.png)
+![keyboard](http://chengchao.name/resource-container/image/keyboard.png)
 
 
 ### 引言 ###

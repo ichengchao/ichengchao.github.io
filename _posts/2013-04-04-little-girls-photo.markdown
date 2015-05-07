@@ -9,4 +9,4 @@ tags:
 
 girls:
 ----
-![little girls](http://7vii66.com1.z0.glb.clouddn.com/2013-04-04-little-girls-photo.jpg)
+![little girls](http://chengchao.name/resource-container/image/little-girls.jpg)
