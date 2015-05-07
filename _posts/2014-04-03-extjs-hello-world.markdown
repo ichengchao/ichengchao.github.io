@@ -46,6 +46,7 @@ index.html
 ```
 
 index.js
+
 ```js
 Ext.onReady(function() {
 			Ext.MessageBox.alert('Hello', 'extjs.');
