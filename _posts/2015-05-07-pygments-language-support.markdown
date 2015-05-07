@@ -1,7 +1,7 @@
 ---
-layout: post
-title: pygments的高亮语法支持
-date: 2015-05-07 22:17
+layout:post
+title:pygments的高亮语法支持
+date:2015-05-0722:17
 tags:
   - jekyll
   - blog
@@ -11,361 +11,366 @@ tags:
 >今天把jekyll的引擎从rdiscount换成了redcarpet  
 >终于不用使用恶心的大括号来高亮code了.由于经常需要查找pygments支持的语言  
 >就把pygments支持的语言贴在这边方便查找.  
->btw:pygments.org这个网站经常性的打不开
+>btw:pygments.org这个网站经常性的打不开  
 
-|缩写| 文件后缀|
-| -------- | -------- |
-|as3, actionscript3|*.as|
-|as, actionscript|*.as|
-|mxml|*.mxml|
-|gap|*.g, *.gd, *.gi, *.gap|
-|mathematica, mma, nb|*.nb, *.cdf, *.nbp, *.ma|
-|mupad|*.mu|
-|at, ambienttalk, ambienttalk/2|*.at|
-|apl|*.apl|
-|c-objdump|*.c-objdump|
-|ca65|*.s|
-|cpp-objdump, c++-objdumb, cxx-objdump|*.cpp-objdump, *.c++-objdump, *.cxx-objdump|
-|d-objdump|*.d-objdump|
-|gas, asm|*.s, *.S|
-|llvm|*.ll|
-|nasm|*.asm, *.ASM|
-|objdump-nasm|*.objdump-intel|
-|objdump|*.objdump|
-|autoit|*.au3|
-|ahk, autohotkey|*.ahk, *.ahkl|
-|blitzbasic, b3d, bplus|*.bb, *.decls|
-|blitzmax, bmax|*.bmx|
-|cbmbas|*.bas|
-|monkey|*.monkey|
-|qbasic, basic|*.BAS, *.bas|
-|abap|*.abap|
-|cobolfree|*.cbl, *.CBL|
-|cobol|*.cob, *.COB, *.cpy, *.CPY|
-|gooddata-cl|*.gdc|
-|maql|*.maql|
-|openedge, abl, progress|*.p, *.cls|
-|c|*.c, *.h, *.idc|
-|cpp, c++|*.cpp, *.hpp, *.c++, *.h++, *.cc, *.hh, *.cxx, *.hxx, *.C, *.H, *.cp, *.CPP|
-|clay|*.clay|
-|cuda, cu|*.cu, *.cuh|
-|ec|*.ec, *.eh|
-|mql, mq4, mq5, mql4, mql5|*.mq4, *.mq5, *.mqh|
-|nesc|*.nc|
-|pike|*.pike, *.pmod|
-|swig|*.swg, *.i|
-|vala, vapi|*.vala, *.vapi|
-|chapel, chpl|*.chpl|
-|apacheconf, aconf, apache|.htaccess, apache.conf, apache2.conf|
-|cfengine3, cf3|*.cf|
-|docker, dockerfile|Dockerfile, *.docker|
-|ini, cfg, dosini|*.ini, *.cfg|
-|kconfig, menuconfig, linux-config, kernel-config|Kconfig, *Config.in*, external.in*, standard-modules.in|
-|lighty, lighttpd|None|
-|nginx|None|
-|properties, jproperties|*.properties|
-|registry|*.reg|
-|squidconf, squid.conf, squid|squid.conf|
-|pypylog, pypy|*.pypylog|
-|vctreestatus|None|
-|css|*.css|
-|sass|*.sass|
-|scss|*.scss|
-|croc|*.croc|
-|d|*.d, *.di|
-|minid|None|
-|smali|*.smali|
-|jsonld, json-ld|*.jsonld|
-|json|*.json|
-|yaml|*.yaml, *.yml|
-|dpatch|*.dpatch, *.darcspatch|
-|diff, udiff|*.diff, *.patch|
-|boo|*.boo|
-|aspx-cs|*.aspx, *.asax, *.ascx, *.ashx, *.asmx, *.axd|
-|csharp, c#|*.cs|
-|fsharp|*.fs, *.fsi|
-|nemerle|*.n|
-|aspx-vb|*.aspx, *.asax, *.ascx, *.ashx, *.asmx, *.axd|
-|vb.net, vbnet|*.vb, *.bas|
-|alloy|*.als|
-|bro|*.bro|
-|mscgen, msc|*.msc|
-|pan|*.pan|
-|protobuf, proto|*.proto|
-|puppet|*.pp|
-|rsl|*.rsl|
-|vgl|*.rpf|
-|dylan-console, dylan-repl|*.dylan-console|
-|dylan|*.dylan, *.dyl, *.intr|
-|dylan-lid, lid|*.lid, *.hdp|
-|ecl|*.ecl|
-|eiffel|*.e|
-|iex|None|
-|elixir, ex, exs|*.ex, *.exs|
-|erlang|*.erl, *.hrl, *.es, *.escript|
-|erl|*.erl-sh|
-|befunge|*.befunge|
-|brainfuck, bf|*.bf, *.b|
-|redcode|*.cw|
-|factor|*.factor|
-|fan|*.fan|
-|felix, flx|*.flx, *.flxh|
-|fortran|*.f, *.f90, *.F, *.F90|
-|foxpro, vfp, clipper, xbase|*.PRG, *.prg|
-|go|*.go|
-|cypher|*.cyp, *.cypher|
-|asy, asymptote|*.asy|
-|glsl|*.vert, *.frag, *.geo|
-|gnuplot|*.plot, *.plt|
-|postscript, postscr|*.ps, *.eps|
-|pov|*.pov, *.inc|
-|agda|*.agda|
-|cryptol, cry|*.cry|
-|haskell, hs|*.hs|
-|idris, idr|*.idr|
-|koka|*.kk, *.kki|
-|lagda, literate-agda|*.lagda|
-|lcry, literate-cryptol, lcryptol|*.lcry|
-|lhs, literate-haskell, lhaskell|*.lhs|
-|lidr, literate-idris, lidris|*.lidr|
-|hx, haxe, hxsl|*.hx, *.hxsl|
-|haxeml, hxml|*.hxml|
-|systemverilog, sv|*.sv, *.svh|
-|verilog, v|*.v|
-|vhdl|*.vhdl, *.vhd|
-|dtd|*.dtd|
-|haml|*.haml|
-|html|*.html, *.htm, *.xhtml, *.xslt|
-|jade|*.jade|
-|scaml|*.scaml|
-|xml|*.xml, *.xsl, *.rss, *.xslt, *.xsd, *.wsdl, *.wsf|
-|xslt|*.xsl, *.xslt, *.xpl|
-|idl|*.pro|
-|igor, igorpro|*.ipf|
-|limbo|*.b|
-|control, debcontrol|control|
-|nsis, nsi, nsh|*.nsi, *.nsh|
-|spec|*.spec|
-|sourceslist, sources.list, debsources|sources.list|
-|inform6, i6|*.inf|
-|i6t|*.i6t|
-|inform7, i7|*.ni, *.i7x|
-|tads3|*.t|
-|io|*.io|
-|coffee-script, coffeescript, coffee|*.coffee|
-|dart|*.dart|
-|js, javascript|*.js|
-|kal|*.kal|
-|lasso, lassoscript|*.lasso, *.lasso[89]|
-|live-script, livescript|*.ls|
-|mask|*.mask|
-|objective-j, objectivej, obj-j, objj|*.j|
-|ts|*.ts|
-|jlcon|None|
-|julia, jl|*.jl|
-|aspectj|*.aj|
-|ceylon|*.ceylon|
-|clojure, clj|*.clj|
-|clojurescript, cljs|*.cljs|
-|golo|*.golo|
-|gosu|*.gs, *.gsx, *.gsp, *.vark|
-|gst|*.gst|
-|groovy|*.groovy|
-|ioke, ik|*.ik|
-|jasmin, jasminxt|*.j|
-|java|*.java|
-|kotlin|*.kt|
-|pig|*.pig|
-|scala|*.scala|
-|xtend|*.xtend|
-|common-lisp, cl, lisp, elisp, emacs, emacs-lisp|*.cl, *.lisp, *.el|
-|hylang|*.hy|
-|newlisp|*.lsp, *.nl|
-|racket, rkt|*.rkt, *.rktd, *.rktl|
-|scheme, scm|*.scm, *.ss|
-|basemake|None|
-|cmake|*.cmake, CMakeLists.txt|
-|make, makefile, mf, bsdmake|*.mak, *.mk, Makefile, makefile, Makefile.*, GNUmakefile|
-|bbcode|None|
-|groff, nroff, man|*.[1234567], *.man|
-|trac-wiki, moin|None|
-|css+mozpreproc|*.css.in|
-|mozhashpreproc|None|
-|javascript+mozpreproc|*.js.in|
-|mozpercentpreproc|None|
-|xul+mozpreproc|*.xul.in|
-|rst, rest, restructuredtext|*.rst, *.rest|
-|tex, latex|*.tex, *.aux, *.toc|
-|matlab|*.m|
-|matlabsession|None|
-|octave|*.m|
-|scilab|*.sci, *.sce, *.tst|
-|ocaml|*.ml, *.mli, *.mll, *.mly|
-|opa|*.opa|
-|sml|*.sml, *.sig, *.fun|
-|bugs, winbugs, openbugs|*.bug|
-|jags|*.jag, *.bug|
-|modelica|*.mo|
-|stan|*.stan|
-|nimrod, nim|*.nim, *.nimrod|
-|nit|*.nit|
-|nixos, nix|*.nix|
-|logos|*.x, *.xi, *.xm, *.xmi|
-|objective-c, objectivec, obj-c, objc|*.m, *.h|
-|objective-c++, objectivec++, obj-c++, objc++|*.mm, *.hh|
-|swift|*.swift|
-|ooc|*.ooc|
-|antlr-as, antlr-actionscript|*.G, *.g|
-|antlr-csharp, antlr-c#|*.G, *.g|
-|antlr-cpp|*.G, *.g|
-|antlr-java|*.G, *.g|
-|antlr|None|
-|antlr-objc|*.G, *.g|
-|antlr-perl|*.G, *.g|
-|antlr-python|*.G, *.g|
-|antlr-ruby, antlr-rb|*.G, *.g|
-|ebnf|*.ebnf|
-|ragel-c|*.rl|
-|ragel-cpp|*.rl|
-|ragel-d|*.rl|
-|ragel-em|*.rl|
-|ragel-java|*.rl|
-|ragel|None|
-|ragel-objc|*.rl|
-|ragel-ruby, ragel-rb|*.rl|
-|treetop|*.treetop, *.tt|
-|ada, ada95, ada2005|*.adb, *.ads, *.ada|
-|delphi, pas, pascal, objectpascal|*.pas|
-|modula2, m2|*.def, *.mod|
-|pawn|*.p, *.pwn, *.inc|
-|sp|*.sp|
-|perl6, pl6|*.pl, *.pm, *.nqp, *.p6, *.6pl, *.p6l, *.pl6, *.6pm, *.p6m, *.pm6, *.t|
-|perl, pl|*.pl, *.pm, *.t|
-|php, php3, php4, php5|*.php, *.php[345], *.inc|
-|zephir|*.zep|
-|logtalk|*.lgt, *.logtalk|
-|prolog|*.ecl, *.prolog, *.pro, *.pl|
-|cython, pyx, pyrex|*.pyx, *.pxd, *.pxi|
-|dg|*.dg|
-|numpy|None|
-|python3, py3|None|
-|py3tb|*.py3tb|
-|pycon|None|
-|python, py, sage|*.py, *.pyw, *.sc, SConstruct, SConscript, *.tac, *.sage|
-|pytb|*.pytb|
-|rconsole, rout|*.Rout|
-|rd|*.Rd|
-|splus, s, r|*.S, *.R, .Rhistory, .Rprofile, .Renviron|
-|sparql|*.rq, *.sparql|
-|rebol|*.r, *.r3, *.reb|
-|red, red/system|*.red, *.reds|
-|resource, resourcebundle|*.txt|
-|robotframework|*.txt, *.robot|
-|fancy, fy|*.fy, *.fancypack|
-|rbcon, irb|None|
-|rb, ruby, duby|*.rb, *.rbw, Rakefile, *.rake, *.gemspec, *.rbx, *.duby|
-|rust|*.rs|
-|applescript|*.applescript|
-|chai, chaiscript|*.chai|
-|hybris, hy|*.hy, *.hyb|
-|lsl|*.lsl|
-|lua|*.lua, *.wlua|
-|moocode, moo|*.moo|
-|moon, moonscript|*.moon|
-|rexx, arexx|*.rexx, *.rex, *.rx, *.arexx|
-|bash, sh, ksh, shell|*.sh, *.ksh, *.bash, *.ebuild, *.eclass, .bashrc, bashrc, .bash\*, bash\*, PKGBUILD|
-|console|*.sh-session|
-|bat, batch, dosbatch, winbatch|*.bat, *.cmd|
-|powershell, posh, ps1, psm1|*.ps1, *.psm1|
-|shell-session|*.shell-session|
-|tcsh, csh|*.tcsh, *.csh|
-|newspeak|*.ns2|
-|smalltalk, squeak, st|*.st|
-|snobol|*.snobol|
-|raw|None|
-|text|*.txt|
-|mysql|None|
-|plpgsql|None|
-|psql, postgresql-console, postgres-console|None|
-|postgresql, postgres|None|
-|rql|*.rql|
-|sql|*.sql|
-|sqlite3|*.sqlite3-console|
-|tcl|*.tcl, *.rvt|
-|html+cheetah, html+spitfire, htmlcheetah|None|
-|js+cheetah, javascript+cheetah, js+spitfire, javascript+spitfire|None|
-|cheetah, spitfire|*.tmpl, *.spt|
-|xml+cheetah, xml+spitfire|None|
-|cfc|*.cfc|
-|cfm|*.cfm, *.cfml|
-|cfs|None|
-|css+django, css+jinja|None|
-|css+erb, css+ruby|None|
-|css+genshitext, css+genshi|None|
-|css+php|None|
-|css+smarty|None|
-|django, jinja|None|
-|erb|None|
-|html+evoque|*.html|
-|evoque|*.evoque|
-|xml+evoque|*.xml|
-|genshi, kid, xml+genshi, xml+kid|*.kid|
-|genshitext|None|
-|html+handlebars|*.handlebars, *.hbs|
-|handlebars|None|
-|html+django, html+jinja, htmldjango|None|
-|html+genshi, html+kid|None|
-|html+php|*.phtml|
-|html+smarty|None|
-|js+django, javascript+django, js+jinja, javascript+jinja|None|
-|js+erb, javascript+erb, js+ruby, javascript+ruby|None|
-|js+genshitext, js+genshi, javascript+genshitext, javascript+genshi|None|
-|js+php, javascript+php|None|
-|js+smarty, javascript+smarty|None|
-|jsp|*.jsp|
-|css+lasso|None|
-|html+lasso|None|
-|js+lasso, javascript+lasso|None|
-|xml+lasso|None|
-|liquid|*.liquid|
-|css+mako|None|
-|html+mako|None|
-|js+mako, javascript+mako|None|
-|mako|*.mao|
-|xml+mako|None|
-|mason|*.m, *.mhtml, *.mc, *.mi, autohandler, dhandler|
-|css+myghty|None|
-|html+myghty|None|
-|js+myghty, javascript+myghty|None|
-|myghty|*.myt, autodelegate|
-|xml+myghty|None|
-|rhtml, html+erb, html+ruby|*.rhtml|
-|smarty|*.tpl|
-|ssp|*.ssp|
-|tea|*.tea|
-|html+twig|*.twig|
-|twig|None|
-|html+velocity|None|
-|velocity|*.vm, *.fhtml|
-|xml+velocity|None|
-|xml+django, xml+jinja|None|
-|xml+erb, xml+ruby|None|
-|xml+php|None|
-|xml+smarty|None|
-|yaml+jinja, salt, sls|*.sls|
-|cucumber, gherkin|*.feature|
-|awk, gawk, mawk, nawk|*.awk|
-|vim|*.vim, .vimrc, .exrc, .gvimrc, vimrc, exrc, gvimrc, vimrc, gvimrc|
-|pot, po|*.pot, *.po|
-|http|None|
-|irc|*.weechatlog|
-|todotxt|todo.txt, *.todotxt|
-|coq|*.v|
-|isabelle|*.thy|
-|lean|*.lean|
-|urbiscript|*.u|
-|cirru|*.cirru|
-|duel, jbst, jsonml+bst|*.duel, *.jbst|
-|qml|*.qml|
-|slim|*.slim|
-|xquery, xqy, xq, xql, xqm|*.xqy, *.xquery, *.xq, *.xql, *.xqm|
+<table>
+<thead>
+<tr><th>缩写</th><th>文件后缀</th></tr>
+</thead>
+<tbody>
+<tr><td>as3,actionscript3</td><td>*.as</td></tr>
+<tr><td>as,actionscript</td><td>*.as</td></tr>
+<tr><td>mxml</td><td>*.mxml</td></tr>
+<tr><td>gap</td><td>*.g,*.gd,*.gi,*.gap</td></tr>
+<tr><td>mathematica,mma,nb</td><td>*.nb,*.cdf,*.nbp,*.ma</td></tr>
+<tr><td>mupad</td><td>*.mu</td></tr>
+<tr><td>at,ambienttalk,ambienttalk/2</td><td>*.at</td></tr>
+<tr><td>apl</td><td>*.apl</td></tr>
+<tr><td>c-objdump</td><td>*.c-objdump</td></tr>
+<tr><td>ca65</td><td>*.s</td></tr>
+<tr><td>cpp-objdump,c++-objdumb,cxx-objdump</td><td>*.cpp-objdump,*.c++-objdump,*.cxx-objdump</td></tr>
+<tr><td>d-objdump</td><td>*.d-objdump</td></tr>
+<tr><td>gas,asm</td><td>*.s,*.S</td></tr>
+<tr><td>llvm</td><td>*.ll</td></tr>
+<tr><td>nasm</td><td>*.asm,*.ASM</td></tr>
+<tr><td>objdump-nasm</td><td>*.objdump-intel</td></tr>
+<tr><td>objdump</td><td>*.objdump</td></tr>
+<tr><td>autoit</td><td>*.au3</td></tr>
+<tr><td>ahk,autohotkey</td><td>*.ahk,*.ahkl</td></tr>
+<tr><td>blitzbasic,b3d,bplus</td><td>*.bb,*.decls</td></tr>
+<tr><td>blitzmax,bmax</td><td>*.bmx</td></tr>
+<tr><td>cbmbas</td><td>*.bas</td></tr>
+<tr><td>monkey</td><td>*.monkey</td></tr>
+<tr><td>qbasic,basic</td><td>*.BAS,*.bas</td></tr>
+<tr><td>abap</td><td>*.abap</td></tr>
+<tr><td>cobolfree</td><td>*.cbl,*.CBL</td></tr>
+<tr><td>cobol</td><td>*.cob,*.COB,*.cpy,*.CPY</td></tr>
+<tr><td>gooddata-cl</td><td>*.gdc</td></tr>
+<tr><td>maql</td><td>*.maql</td></tr>
+<tr><td>openedge,abl,progress</td><td>*.p,*.cls</td></tr>
+<tr><td>c</td><td>*.c,*.h,*.idc</td></tr>
+<tr><td>cpp,c++</td><td>*.cpp,*.hpp,*.c++,*.h++,*.cc,*.hh,*.cxx,*.hxx,*.C,*.H,*.cp,*.CPP</td></tr>
+<tr><td>clay</td><td>*.clay</td></tr>
+<tr><td>cuda,cu</td><td>*.cu,*.cuh</td></tr>
+<tr><td>ec</td><td>*.ec,*.eh</td></tr>
+<tr><td>mql,mq4,mq5,mql4,mql5</td><td>*.mq4,*.mq5,*.mqh</td></tr>
+<tr><td>nesc</td><td>*.nc</td></tr>
+<tr><td>pike</td><td>*.pike,*.pmod</td></tr>
+<tr><td>swig</td><td>*.swg,*.i</td></tr>
+<tr><td>vala,vapi</td><td>*.vala,*.vapi</td></tr>
+<tr><td>chapel,chpl</td><td>*.chpl</td></tr>
+<tr><td>apacheconf,aconf,apache</td><td>.htaccess,apache.conf,apache2.conf</td></tr>
+<tr><td>cfengine3,cf3</td><td>*.cf</td></tr>
+<tr><td>docker,dockerfile</td><td>Dockerfile,*.docker</td></tr>
+<tr><td>ini,cfg,dosini</td><td>*.ini,*.cfg</td></tr>
+<tr><td>kconfig,menuconfig,linux-config,kernel-config</td><td>Kconfig,*Config.in*,external.in*,standard-modules.in</td></tr>
+<tr><td>lighty,lighttpd</td><td>None</td></tr>
+<tr><td>nginx</td><td>None</td></tr>
+<tr><td>properties,jproperties</td><td>*.properties</td></tr>
+<tr><td>registry</td><td>*.reg</td></tr>
+<tr><td>squidconf,squid.conf,squid</td><td>squid.conf</td></tr>
+<tr><td>pypylog,pypy</td><td>*.pypylog</td></tr>
+<tr><td>vctreestatus</td><td>None</td></tr>
+<tr><td>css</td><td>*.css</td></tr>
+<tr><td>sass</td><td>*.sass</td></tr>
+<tr><td>scss</td><td>*.scss</td></tr>
+<tr><td>croc</td><td>*.croc</td></tr>
+<tr><td>d</td><td>*.d,*.di</td></tr>
+<tr><td>minid</td><td>None</td></tr>
+<tr><td>smali</td><td>*.smali</td></tr>
+<tr><td>jsonld,json-ld</td><td>*.jsonld</td></tr>
+<tr><td>json</td><td>*.json</td></tr>
+<tr><td>yaml</td><td>*.yaml,*.yml</td></tr>
+<tr><td>dpatch</td><td>*.dpatch,*.darcspatch</td></tr>
+<tr><td>diff,udiff</td><td>*.diff,*.patch</td></tr>
+<tr><td>boo</td><td>*.boo</td></tr>
+<tr><td>aspx-cs</td><td>*.aspx,*.asax,*.ascx,*.ashx,*.asmx,*.axd</td></tr>
+<tr><td>csharp,c#</td><td>*.cs</td></tr>
+<tr><td>fsharp</td><td>*.fs,*.fsi</td></tr>
+<tr><td>nemerle</td><td>*.n</td></tr>
+<tr><td>aspx-vb</td><td>*.aspx,*.asax,*.ascx,*.ashx,*.asmx,*.axd</td></tr>
+<tr><td>vb.net,vbnet</td><td>*.vb,*.bas</td></tr>
+<tr><td>alloy</td><td>*.als</td></tr>
+<tr><td>bro</td><td>*.bro</td></tr>
+<tr><td>mscgen,msc</td><td>*.msc</td></tr>
+<tr><td>pan</td><td>*.pan</td></tr>
+<tr><td>protobuf,proto</td><td>*.proto</td></tr>
+<tr><td>puppet</td><td>*.pp</td></tr>
+<tr><td>rsl</td><td>*.rsl</td></tr>
+<tr><td>vgl</td><td>*.rpf</td></tr>
+<tr><td>dylan-console,dylan-repl</td><td>*.dylan-console</td></tr>
+<tr><td>dylan</td><td>*.dylan,*.dyl,*.intr</td></tr>
+<tr><td>dylan-lid,lid</td><td>*.lid,*.hdp</td></tr>
+<tr><td>ecl</td><td>*.ecl</td></tr>
+<tr><td>eiffel</td><td>*.e</td></tr>
+<tr><td>iex</td><td>None</td></tr>
+<tr><td>elixir,ex,exs</td><td>*.ex,*.exs</td></tr>
+<tr><td>erlang</td><td>*.erl,*.hrl,*.es,*.escript</td></tr>
+<tr><td>erl</td><td>*.erl-sh</td></tr>
+<tr><td>befunge</td><td>*.befunge</td></tr>
+<tr><td>brainfuck,bf</td><td>*.bf,*.b</td></tr>
+<tr><td>redcode</td><td>*.cw</td></tr>
+<tr><td>factor</td><td>*.factor</td></tr>
+<tr><td>fan</td><td>*.fan</td></tr>
+<tr><td>felix,flx</td><td>*.flx,*.flxh</td></tr>
+<tr><td>fortran</td><td>*.f,*.f90,*.F,*.F90</td></tr>
+<tr><td>foxpro,vfp,clipper,xbase</td><td>*.PRG,*.prg</td></tr>
+<tr><td>go</td><td>*.go</td></tr>
+<tr><td>cypher</td><td>*.cyp,*.cypher</td></tr>
+<tr><td>asy,asymptote</td><td>*.asy</td></tr>
+<tr><td>glsl</td><td>*.vert,*.frag,*.geo</td></tr>
+<tr><td>gnuplot</td><td>*.plot,*.plt</td></tr>
+<tr><td>postscript,postscr</td><td>*.ps,*.eps</td></tr>
+<tr><td>pov</td><td>*.pov,*.inc</td></tr>
+<tr><td>agda</td><td>*.agda</td></tr>
+<tr><td>cryptol,cry</td><td>*.cry</td></tr>
+<tr><td>haskell,hs</td><td>*.hs</td></tr>
+<tr><td>idris,idr</td><td>*.idr</td></tr>
+<tr><td>koka</td><td>*.kk,*.kki</td></tr>
+<tr><td>lagda,literate-agda</td><td>*.lagda</td></tr>
+<tr><td>lcry,literate-cryptol,lcryptol</td><td>*.lcry</td></tr>
+<tr><td>lhs,literate-haskell,lhaskell</td><td>*.lhs</td></tr>
+<tr><td>lidr,literate-idris,lidris</td><td>*.lidr</td></tr>
+<tr><td>hx,haxe,hxsl</td><td>*.hx,*.hxsl</td></tr>
+<tr><td>haxeml,hxml</td><td>*.hxml</td></tr>
+<tr><td>systemverilog,sv</td><td>*.sv,*.svh</td></tr>
+<tr><td>verilog,v</td><td>*.v</td></tr>
+<tr><td>vhdl</td><td>*.vhdl,*.vhd</td></tr>
+<tr><td>dtd</td><td>*.dtd</td></tr>
+<tr><td>haml</td><td>*.haml</td></tr>
+<tr><td>html</td><td>*.html,*.htm,*.xhtml,*.xslt</td></tr>
+<tr><td>jade</td><td>*.jade</td></tr>
+<tr><td>scaml</td><td>*.scaml</td></tr>
+<tr><td>xml</td><td>*.xml,*.xsl,*.rss,*.xslt,*.xsd,*.wsdl,*.wsf</td></tr>
+<tr><td>xslt</td><td>*.xsl,*.xslt,*.xpl</td></tr>
+<tr><td>idl</td><td>*.pro</td></tr>
+<tr><td>igor,igorpro</td><td>*.ipf</td></tr>
+<tr><td>limbo</td><td>*.b</td></tr>
+<tr><td>control,debcontrol</td><td>control</td></tr>
+<tr><td>nsis,nsi,nsh</td><td>*.nsi,*.nsh</td></tr>
+<tr><td>spec</td><td>*.spec</td></tr>
+<tr><td>sourceslist,sources.list,debsources</td><td>sources.list</td></tr>
+<tr><td>inform6,i6</td><td>*.inf</td></tr>
+<tr><td>i6t</td><td>*.i6t</td></tr>
+<tr><td>inform7,i7</td><td>*.ni,*.i7x</td></tr>
+<tr><td>tads3</td><td>*.t</td></tr>
+<tr><td>io</td><td>*.io</td></tr>
+<tr><td>coffee-script,coffeescript,coffee</td><td>*.coffee</td></tr>
+<tr><td>dart</td><td>*.dart</td></tr>
+<tr><td>js,javascript</td><td>*.js</td></tr>
+<tr><td>kal</td><td>*.kal</td></tr>
+<tr><td>lasso,lassoscript</td><td>*.lasso,*.lasso[89]</td></tr>
+<tr><td>live-script,livescript</td><td>*.ls</td></tr>
+<tr><td>mask</td><td>*.mask</td></tr>
+<tr><td>objective-j,objectivej,obj-j,objj</td><td>*.j</td></tr>
+<tr><td>ts</td><td>*.ts</td></tr>
+<tr><td>jlcon</td><td>None</td></tr>
+<tr><td>julia,jl</td><td>*.jl</td></tr>
+<tr><td>aspectj</td><td>*.aj</td></tr>
+<tr><td>ceylon</td><td>*.ceylon</td></tr>
+<tr><td>clojure,clj</td><td>*.clj</td></tr>
+<tr><td>clojurescript,cljs</td><td>*.cljs</td></tr>
+<tr><td>golo</td><td>*.golo</td></tr>
+<tr><td>gosu</td><td>*.gs,*.gsx,*.gsp,*.vark</td></tr>
+<tr><td>gst</td><td>*.gst</td></tr>
+<tr><td>groovy</td><td>*.groovy</td></tr>
+<tr><td>ioke,ik</td><td>*.ik</td></tr>
+<tr><td>jasmin,jasminxt</td><td>*.j</td></tr>
+<tr><td>java</td><td>*.java</td></tr>
+<tr><td>kotlin</td><td>*.kt</td></tr>
+<tr><td>pig</td><td>*.pig</td></tr>
+<tr><td>scala</td><td>*.scala</td></tr>
+<tr><td>xtend</td><td>*.xtend</td></tr>
+<tr><td>common-lisp,cl,lisp,elisp,emacs,emacs-lisp</td><td>*.cl,*.lisp,*.el</td></tr>
+<tr><td>hylang</td><td>*.hy</td></tr>
+<tr><td>newlisp</td><td>*.lsp,*.nl</td></tr>
+<tr><td>racket,rkt</td><td>*.rkt,*.rktd,*.rktl</td></tr>
+<tr><td>scheme,scm</td><td>*.scm,*.ss</td></tr>
+<tr><td>basemake</td><td>None</td></tr>
+<tr><td>cmake</td><td>*.cmake,CMakeLists.txt</td></tr>
+<tr><td>make,makefile,mf,bsdmake</td><td>*.mak,*.mk,Makefile,makefile,Makefile.*,GNUmakefile</td></tr>
+<tr><td>bbcode</td><td>None</td></tr>
+<tr><td>groff,nroff,man</td><td>*.[1234567],*.man</td></tr>
+<tr><td>trac-wiki,moin</td><td>None</td></tr>
+<tr><td>css+mozpreproc</td><td>*.css.in</td></tr>
+<tr><td>mozhashpreproc</td><td>None</td></tr>
+<tr><td>javascript+mozpreproc</td><td>*.js.in</td></tr>
+<tr><td>mozpercentpreproc</td><td>None</td></tr>
+<tr><td>xul+mozpreproc</td><td>*.xul.in</td></tr>
+<tr><td>rst,rest,restructuredtext</td><td>*.rst,*.rest</td></tr>
+<tr><td>tex,latex</td><td>*.tex,*.aux,*.toc</td></tr>
+<tr><td>matlab</td><td>*.m</td></tr>
+<tr><td>matlabsession</td><td>None</td></tr>
+<tr><td>octave</td><td>*.m</td></tr>
+<tr><td>scilab</td><td>*.sci,*.sce,*.tst</td></tr>
+<tr><td>ocaml</td><td>*.ml,*.mli,*.mll,*.mly</td></tr>
+<tr><td>opa</td><td>*.opa</td></tr>
+<tr><td>sml</td><td>*.sml,*.sig,*.fun</td></tr>
+<tr><td>bugs,winbugs,openbugs</td><td>*.bug</td></tr>
+<tr><td>jags</td><td>*.jag,*.bug</td></tr>
+<tr><td>modelica</td><td>*.mo</td></tr>
+<tr><td>stan</td><td>*.stan</td></tr>
+<tr><td>nimrod,nim</td><td>*.nim,*.nimrod</td></tr>
+<tr><td>nit</td><td>*.nit</td></tr>
+<tr><td>nixos,nix</td><td>*.nix</td></tr>
+<tr><td>logos</td><td>*.x,*.xi,*.xm,*.xmi</td></tr>
+<tr><td>objective-c,objectivec,obj-c,objc</td><td>*.m,*.h</td></tr>
+<tr><td>objective-c++,objectivec++,obj-c++,objc++</td><td>*.mm,*.hh</td></tr>
+<tr><td>swift</td><td>*.swift</td></tr>
+<tr><td>ooc</td><td>*.ooc</td></tr>
+<tr><td>antlr-as,antlr-actionscript</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-csharp,antlr-c#</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-cpp</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-java</td><td>*.G,*.g</td></tr>
+<tr><td>antlr</td><td>None</td></tr>
+<tr><td>antlr-objc</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-perl</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-python</td><td>*.G,*.g</td></tr>
+<tr><td>antlr-ruby,antlr-rb</td><td>*.G,*.g</td></tr>
+<tr><td>ebnf</td><td>*.ebnf</td></tr>
+<tr><td>ragel-c</td><td>*.rl</td></tr>
+<tr><td>ragel-cpp</td><td>*.rl</td></tr>
+<tr><td>ragel-d</td><td>*.rl</td></tr>
+<tr><td>ragel-em</td><td>*.rl</td></tr>
+<tr><td>ragel-java</td><td>*.rl</td></tr>
+<tr><td>ragel</td><td>None</td></tr>
+<tr><td>ragel-objc</td><td>*.rl</td></tr>
+<tr><td>ragel-ruby,ragel-rb</td><td>*.rl</td></tr>
+<tr><td>treetop</td><td>*.treetop,*.tt</td></tr>
+<tr><td>ada,ada95,ada2005</td><td>*.adb,*.ads,*.ada</td></tr>
+<tr><td>delphi,pas,pascal,objectpascal</td><td>*.pas</td></tr>
+<tr><td>modula2,m2</td><td>*.def,*.mod</td></tr>
+<tr><td>pawn</td><td>*.p,*.pwn,*.inc</td></tr>
+<tr><td>sp</td><td>*.sp</td></tr>
+<tr><td>perl6,pl6</td><td>*.pl,*.pm,*.nqp,*.p6,*.6pl,*.p6l,*.pl6,*.6pm,*.p6m,*.pm6,*.t</td></tr>
+<tr><td>perl,pl</td><td>*.pl,*.pm,*.t</td></tr>
+<tr><td>php,php3,php4,php5</td><td>*.php,*.php[345],*.inc</td></tr>
+<tr><td>zephir</td><td>*.zep</td></tr>
+<tr><td>logtalk</td><td>*.lgt,*.logtalk</td></tr>
+<tr><td>prolog</td><td>*.ecl,*.prolog,*.pro,*.pl</td></tr>
+<tr><td>cython,pyx,pyrex</td><td>*.pyx,*.pxd,*.pxi</td></tr>
+<tr><td>dg</td><td>*.dg</td></tr>
+<tr><td>numpy</td><td>None</td></tr>
+<tr><td>python3,py3</td><td>None</td></tr>
+<tr><td>py3tb</td><td>*.py3tb</td></tr>
+<tr><td>pycon</td><td>None</td></tr>
+<tr><td>python,py,sage</td><td>*.py,*.pyw,*.sc,SConstruct,SConscript,*.tac,*.sage</td></tr>
+<tr><td>pytb</td><td>*.pytb</td></tr>
+<tr><td>rconsole,rout</td><td>*.Rout</td></tr>
+<tr><td>rd</td><td>*.Rd</td></tr>
+<tr><td>splus,s,r</td><td>*.S,*.R,.Rhistory,.Rprofile,.Renviron</td></tr>
+<tr><td>sparql</td><td>*.rq,*.sparql</td></tr>
+<tr><td>rebol</td><td>*.r,*.r3,*.reb</td></tr>
+<tr><td>red,red/system</td><td>*.red,*.reds</td></tr>
+<tr><td>resource,resourcebundle</td><td>*.txt</td></tr>
+<tr><td>robotframework</td><td>*.txt,*.robot</td></tr>
+<tr><td>fancy,fy</td><td>*.fy,*.fancypack</td></tr>
+<tr><td>rbcon,irb</td><td>None</td></tr>
+<tr><td>rb,ruby,duby</td><td>*.rb,*.rbw,Rakefile,*.rake,*.gemspec,*.rbx,*.duby</td></tr>
+<tr><td>rust</td><td>*.rs</td></tr>
+<tr><td>applescript</td><td>*.applescript</td></tr>
+<tr><td>chai,chaiscript</td><td>*.chai</td></tr>
+<tr><td>hybris,hy</td><td>*.hy,*.hyb</td></tr>
+<tr><td>lsl</td><td>*.lsl</td></tr>
+<tr><td>lua</td><td>*.lua,*.wlua</td></tr>
+<tr><td>moocode,moo</td><td>*.moo</td></tr>
+<tr><td>moon,moonscript</td><td>*.moon</td></tr>
+<tr><td>rexx,arexx</td><td>*.rexx,*.rex,*.rx,*.arexx</td></tr>
+<tr><td>bash,sh,ksh,shell</td><td>*.sh,*.ksh,*.bash,*.ebuild,*.eclass,.bashrc,bashrc,.bash\*,bash\*,PKGBUILD</td></tr>
+<tr><td>console</td><td>*.sh-session</td></tr>
+<tr><td>bat,batch,dosbatch,winbatch</td><td>*.bat,*.cmd</td></tr>
+<tr><td>powershell,posh,ps1,psm1</td><td>*.ps1,*.psm1</td></tr>
+<tr><td>shell-session</td><td>*.shell-session</td></tr>
+<tr><td>tcsh,csh</td><td>*.tcsh,*.csh</td></tr>
+<tr><td>newspeak</td><td>*.ns2</td></tr>
+<tr><td>smalltalk,squeak,st</td><td>*.st</td></tr>
+<tr><td>snobol</td><td>*.snobol</td></tr>
+<tr><td>raw</td><td>None</td></tr>
+<tr><td>text</td><td>*.txt</td></tr>
+<tr><td>mysql</td><td>None</td></tr>
+<tr><td>plpgsql</td><td>None</td></tr>
+<tr><td>psql,postgresql-console,postgres-console</td><td>None</td></tr>
+<tr><td>postgresql,postgres</td><td>None</td></tr>
+<tr><td>rql</td><td>*.rql</td></tr>
+<tr><td>sql</td><td>*.sql</td></tr>
+<tr><td>sqlite3</td><td>*.sqlite3-console</td></tr>
+<tr><td>tcl</td><td>*.tcl,*.rvt</td></tr>
+<tr><td>html+cheetah,html+spitfire,htmlcheetah</td><td>None</td></tr>
+<tr><td>js+cheetah,javascript+cheetah,js+spitfire,javascript+spitfire</td><td>None</td></tr>
+<tr><td>cheetah,spitfire</td><td>*.tmpl,*.spt</td></tr>
+<tr><td>xml+cheetah,xml+spitfire</td><td>None</td></tr>
+<tr><td>cfc</td><td>*.cfc</td></tr>
+<tr><td>cfm</td><td>*.cfm,*.cfml</td></tr>
+<tr><td>cfs</td><td>None</td></tr>
+<tr><td>css+django,css+jinja</td><td>None</td></tr>
+<tr><td>css+erb,css+ruby</td><td>None</td></tr>
+<tr><td>css+genshitext,css+genshi</td><td>None</td></tr>
+<tr><td>css+php</td><td>None</td></tr>
+<tr><td>css+smarty</td><td>None</td></tr>
+<tr><td>django,jinja</td><td>None</td></tr>
+<tr><td>erb</td><td>None</td></tr>
+<tr><td>html+evoque</td><td>*.html</td></tr>
+<tr><td>evoque</td><td>*.evoque</td></tr>
+<tr><td>xml+evoque</td><td>*.xml</td></tr>
+<tr><td>genshi,kid,xml+genshi,xml+kid</td><td>*.kid</td></tr>
+<tr><td>genshitext</td><td>None</td></tr>
+<tr><td>html+handlebars</td><td>*.handlebars,*.hbs</td></tr>
+<tr><td>handlebars</td><td>None</td></tr>
+<tr><td>html+django,html+jinja,htmldjango</td><td>None</td></tr>
+<tr><td>html+genshi,html+kid</td><td>None</td></tr>
+<tr><td>html+php</td><td>*.phtml</td></tr>
+<tr><td>html+smarty</td><td>None</td></tr>
+<tr><td>js+django,javascript+django,js+jinja,javascript+jinja</td><td>None</td></tr>
+<tr><td>js+erb,javascript+erb,js+ruby,javascript+ruby</td><td>None</td></tr>
+<tr><td>js+genshitext,js+genshi,javascript+genshitext,javascript+genshi</td><td>None</td></tr>
+<tr><td>js+php,javascript+php</td><td>None</td></tr>
+<tr><td>js+smarty,javascript+smarty</td><td>None</td></tr>
+<tr><td>jsp</td><td>*.jsp</td></tr>
+<tr><td>css+lasso</td><td>None</td></tr>
+<tr><td>html+lasso</td><td>None</td></tr>
+<tr><td>js+lasso,javascript+lasso</td><td>None</td></tr>
+<tr><td>xml+lasso</td><td>None</td></tr>
+<tr><td>liquid</td><td>*.liquid</td></tr>
+<tr><td>css+mako</td><td>None</td></tr>
+<tr><td>html+mako</td><td>None</td></tr>
+<tr><td>js+mako,javascript+mako</td><td>None</td></tr>
+<tr><td>mako</td><td>*.mao</td></tr>
+<tr><td>xml+mako</td><td>None</td></tr>
+<tr><td>mason</td><td>*.m,*.mhtml,*.mc,*.mi,autohandler,dhandler</td></tr>
+<tr><td>css+myghty</td><td>None</td></tr>
+<tr><td>html+myghty</td><td>None</td></tr>
+<tr><td>js+myghty,javascript+myghty</td><td>None</td></tr>
+<tr><td>myghty</td><td>*.myt,autodelegate</td></tr>
+<tr><td>xml+myghty</td><td>None</td></tr>
+<tr><td>rhtml,html+erb,html+ruby</td><td>*.rhtml</td></tr>
+<tr><td>smarty</td><td>*.tpl</td></tr>
+<tr><td>ssp</td><td>*.ssp</td></tr>
+<tr><td>tea</td><td>*.tea</td></tr>
+<tr><td>html+twig</td><td>*.twig</td></tr>
+<tr><td>twig</td><td>None</td></tr>
+<tr><td>html+velocity</td><td>None</td></tr>
+<tr><td>velocity</td><td>*.vm,*.fhtml</td></tr>
+<tr><td>xml+velocity</td><td>None</td></tr>
+<tr><td>xml+django,xml+jinja</td><td>None</td></tr>
+<tr><td>xml+erb,xml+ruby</td><td>None</td></tr>
+<tr><td>xml+php</td><td>None</td></tr>
+<tr><td>xml+smarty</td><td>None</td></tr>
+<tr><td>yaml+jinja,salt,sls</td><td>*.sls</td></tr>
+<tr><td>cucumber,gherkin</td><td>*.feature</td></tr>
+<tr><td>awk,gawk,mawk,nawk</td><td>*.awk</td></tr>
+<tr><td>vim</td><td>*.vim,.vimrc,.exrc,.gvimrc,vimrc,exrc,gvimrc,vimrc,gvimrc</td></tr>
+<tr><td>pot,po</td><td>*.pot,*.po</td></tr>
+<tr><td>http</td><td>None</td></tr>
+<tr><td>irc</td><td>*.weechatlog</td></tr>
+<tr><td>todotxt</td><td>todo.txt,*.todotxt</td></tr>
+<tr><td>coq</td><td>*.v</td></tr>
+<tr><td>isabelle</td><td>*.thy</td></tr>
+<tr><td>lean</td><td>*.lean</td></tr>
+<tr><td>urbiscript</td><td>*.u</td></tr>
+<tr><td>cirru</td><td>*.cirru</td></tr>
+<tr><td>duel,jbst,jsonml+bst</td><td>*.duel,*.jbst</td></tr>
+<tr><td>qml</td><td>*.qml</td></tr>
+<tr><td>slim</td><td>*.slim</td></tr>
+<tr><td>xquery,xqy,xq,xql,xqm</td><td>*.xqy,*.xquery,*.xq,*.xql,*.xqm</td></tr>
+</tbody>
+</table>
