@@ -14,7 +14,7 @@ tags:
 [维基百科的解释](http://en.wikipedia.org/wiki/Sorting_algorithm)  
 里面介绍了各种各样的排序算法.  
 其中的快速排序有一个非常经典的动态图.  
-![quickSort](http://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
+![quickSort](http://chengchao.name/resource-container/image/sorting_quicksort.gif)
 
 ### 代码示例 ###
 
