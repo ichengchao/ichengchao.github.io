@@ -14,11 +14,8 @@ tags:
 >就把pygments支持的语言贴在这边方便查找.  
 >btw:pygments.org这个网站经常性的打不开  
 
-<table>
-<thead>
+<table class="charlesTable">
 <tr><th>缩写</th><th>文件后缀</th></tr>
-</thead>
-<tbody>
 <tr><td>as3,actionscript3</td><td>*.as</td></tr>
 <tr><td>as,actionscript</td><td>*.as</td></tr>
 <tr><td>mxml</td><td>*.mxml</td></tr>
@@ -373,5 +370,4 @@ tags:
 <tr><td>qml</td><td>*.qml</td></tr>
 <tr><td>slim</td><td>*.slim</td></tr>
 <tr><td>xquery,xqy,xq,xql,xqm</td><td>*.xqy,*.xquery,*.xq,*.xql,*.xqm</td></tr>
-</tbody>
 </table>
