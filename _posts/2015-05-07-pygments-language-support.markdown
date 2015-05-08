@@ -8,11 +8,10 @@ tags:
   
 ---
 
-
->今天把jekyll的引擎从rdiscount换成了redcarpet  
->终于不用使用恶心的大括号来高亮code了.由于经常需要查找pygments支持的语言  
->就把pygments支持的语言贴在这边方便查找.  
->btw:pygments.org这个网站经常性的打不开  
+今天把jekyll的引擎从rdiscount换成了redcarpet,终于不用使用恶心的大括号来高亮code了.  
+高亮方式也由原来的highlight.js换成了经典的pygments.由于经常需要查找pygments支持的语言.页面加载速度快了不少.  
+就把pygments支持的语言贴在这边方便查找.btw,pygments.org这个网站经常性的打不开  
+  
 
 <table class="charlesTable">
 <tr><th>缩写</th><th>文件后缀</th></tr>
