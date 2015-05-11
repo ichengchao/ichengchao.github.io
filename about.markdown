@@ -5,9 +5,9 @@ layout: page
 
 Coder@Hangzhou  
 <br>
-<span><i class="fa fa-weibo fa-lg"></i>:<a title="weibo" href="http://weibo.com/charleshz">charleshz</a></span>
+<span><i class="fa fa-weibo"></i>:<a title="weibo" href="http://weibo.com/charleshz">charleshz</a></span>
 <br>
-<span><i class="fa fa-envelope fa-lg"></i>:<a title="mail" href="mailto:me@chengchao.name">me@chengchao.name</a></span>
+<span><i class="fa fa-envelope"></i>:<a title="mail" href="mailto:me@chengchao.name">me@chengchao.name</a></span>
 <br>
 <br>
 
