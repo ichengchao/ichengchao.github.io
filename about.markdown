@@ -5,10 +5,9 @@ layout: page
 
 Coder@Hangzhou  
 <br>
-<img alt="" width="23px" height="19px" src="http://chengchao.name/resource-container/image/weibo.png">:
-[charleshz](http://weibo.com/charleshz)  
-<img alt="" width="23px" height="19px" src="http://chengchao.name/resource-container/image/email.png">:
-[me@chengchao.name](mailto:me@chengchao.name)  
+<span><i class="fa fa-weibo fa-lg"></i>:<a title="weibo" href="http://weibo.com/charleshz">charleshz</a></span>
+<br>
+<span><i class="fa fa-envelope fa-lg"></i>:<a title="mail" href="mailto:me@chengchao.name">me@chengchao.name</a></span>
 <br>
 <br>
 
