@@ -3,8 +3,12 @@ title: about
 layout: page
 ---
 
-> Coder@Hangzhou  
-
+Coder@Hangzhou  
+<br>
+<img alt="" width="23px" height="19px" src="http://chengchao.name/resource-container/image/weibo.png">:
+[charleshz](http://weibo.com/charleshz)  
+<img alt="" width="23px" height="19px" src="http://chengchao.name/resource-container/image/email.png">:
+[me@chengchao.name](mailto:me@chengchao.name)  
 <br>
 <br>
 
