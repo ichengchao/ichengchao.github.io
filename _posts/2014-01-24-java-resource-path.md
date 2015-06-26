@@ -6,7 +6,6 @@ author: charles
 comments: true
 tags:
  - java
- - jmx
  - tech
 ---
 
