@@ -5,6 +5,7 @@ date: 2013-12-18 14:48
 tags:
   - java
   - tech
+  - jmx
   
 ---
   

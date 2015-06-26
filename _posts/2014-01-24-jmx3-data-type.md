@@ -7,6 +7,7 @@ comments: true
 tags:
  - java
  - jmx
+ - tech
 ---
 
 上两篇已经介绍了jmx的基本知识.
