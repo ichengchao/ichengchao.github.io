@@ -9,64 +9,64 @@ tags:
 ---
 
 日志:
-===
-	slf4j,代码中不能直接使用log4j
+====
+slf4j,代码中不能直接使用log4j
 
 序列化:
-===
-	google protobuf
-	fastjson
-	
+====
+google protobuf
+fastjson
+
 JSON处理:
-===
-	fastjson
+====
+fastjson
 
 XML处理:
-===
-	jdom
+====
+jdom
 
 HTML处理:
-===
-	jsoup
-	
+====
+jsoup
+
 数据库连接池:
-===
-	druid
+====
+druid
 
 数据库ORM:
-===
-	mybatis
+====
+mybatis
 
 本地缓存:
-===
-	google guava(包含很多工具包)
+====
+google guava(包含很多工具包)
 
 常用工具类(File,String,缓存等):
-===
-	apache common
-	google guava
+====
+apache common
+google guava
 
 网络框架:
-===
-	netty
+====
+netty
 
 MVC:
-===
-	spring mvc
+====
+spring mvc
 
 权限:
-===
-	spring security
+====
+spring security
 
 http:
-===
-	httpclient
+====
+httpclient
 
 测试:
-===
-	spring test+junit
+====
+spring test+junit
 
 项目构建:
-===
-	maven
+====
+maven
 
