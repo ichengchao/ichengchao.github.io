@@ -13,7 +13,7 @@ Bash
 ===
 修改home目录下的.bash_profile,增加
 
-```shell
+```sh
 
 alias ll='ls -lG'
 PS1="\n\e[1;37m[\e[m\e[1;32m\u\e[m\e[1;33m@\e[m\e[1;35m\H\e[m \e[4m\W\e[m\e[1;37m]\e[m\e[1;36m\e[m\n\$"
@@ -28,7 +28,7 @@ vim
 在home目录创建一个~/.vim/colors文件夹,把solarized.vim文件拷贝进去  
 同时建一个.vimrc文件,内容如下:
 
-```shell
+```sh
 
 syntax enable
 set background=dark
