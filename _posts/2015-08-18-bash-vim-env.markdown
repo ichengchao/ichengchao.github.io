@@ -5,7 +5,8 @@ date: 2015-08-18 11:48
 tags:
   - tech
   - vim
-  -linux
+  - linux
+
 ---
 
 Bash
