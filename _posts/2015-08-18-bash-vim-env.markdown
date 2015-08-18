@@ -21,7 +21,7 @@ export PS1
 ```
   
   
-
+ 
 vim
 ===
 [solarized](http://ethanschoonover.com/solarized)
