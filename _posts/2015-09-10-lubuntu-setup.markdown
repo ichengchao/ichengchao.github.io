@@ -39,6 +39,18 @@ sudo apt-get install ttf-wqy-microhei  #文泉驿-微米黑
 sudo apt-get install vim
 ```
 
+安装vim的插件管理[vim-pathogen](https://github.com/tpope/vim-pathogen),用来管理VIM的插件,然后安装一个[nerdtree](https://github.com/scrooloose/nerdtree)插件试试,把tab换成4个空格
+
+```sh
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
+```
+
 设置.bashrc或者.bash_profile,把自己喜欢的配置写好  
 我一般修改两个配置
 
@@ -47,4 +59,3 @@ alias ll='ls -lF'
 PS1="\n\e[1;37m[\e[m\e[1;32m\u\e[m\e[1;33m@\e[m\e[1;35m\H\e[m \e[4m\W\e[m\e[1;37m]\e[m\e[1;36m\e[m\n\$"
 export PS1
 ```
-
