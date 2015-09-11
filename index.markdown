@@ -29,6 +29,7 @@ layout: default
   {% endfor %}
   </ul>
   <div class="divider"></div>
+  <div style="background-color: #add866;height: 5px;">&nbsp;</div>
   <ul class="listing main-listing">
     <li class="listing-seperator">Happend earlier this year</i>
   {% capture year %}{{ site.time | date:"%Y"}}{% endcapture %}
