@@ -29,7 +29,7 @@ vim
 [github 地址](https://github.com/altercation/vim-colors-solarized)  
 
 在home目录创建一个~/.vim/colors文件夹,把solarized.vim文件拷贝进去  
-同时建一个.vimrc文件,内容如下:
+同时建一个~/.vimrc文件,内容如下:
 
 ```sh
 
