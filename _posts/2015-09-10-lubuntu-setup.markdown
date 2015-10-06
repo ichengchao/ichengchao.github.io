@@ -56,6 +56,5 @@ set expandtab
 
 ```sh
 alias ll='ls -lF'
-PS1="\n\e[1;37m[\e[m\e[1;32m\u\e[m\e[1;33m@\e[m\e[1;35m\H\e[m \e[4m\W\e[m\e[1;37m]\e[m\e[1;36m\e[m\n\$"
-export PS1
+export PS1='\[\033[01;32m\]\u@\h\[\033[01;36m\]:\w\[\e[01;31m\]$\[\033[00m\] '
 ```
