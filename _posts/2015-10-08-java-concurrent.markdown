@@ -30,13 +30,16 @@ tags:
         }
     }
 ```
-如果long current = get()中get()的值不是volatile的话,有可能会导致死循环
-因为只有是volatile的变量才满足下面两点,这两点对于cas操作非常重要
-在读之前需要强制更新成主内存中的数据
-在写之后需要强制更新到主内存中的数据
-所以在getAndIncrement操作中cas保证原子性,volatile保证内存可见性,两者共同完成无锁的原子操作
 
-使用AtomicXXX的两个重要原因
+- 如果long current = get()中get()的值不是volatile的话,有可能会导致死循环
+- 因为只有是volatile的变量才满足下面两点,这两点对于cas操作非常重要
+- 在读之前需要强制更新成主内存中的数据
+- 在写之后需要强制更新到主内存中的数据
+- 所以在getAndIncrement操作中cas保证原子性,volatile保证内存可见性,两者共同完成无锁的原子操作
+
+
+###使用AtomicXXX的两个重要原因
+
 - 性能好很多
 - 使用方便
 可以参见: http://stackoverflow.com/questions/11670687/when-is-atomicinteger-preferrable-over-synchronized
