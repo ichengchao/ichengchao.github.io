@@ -138,3 +138,116 @@ public class Test {
 		}
 	}
 ```
+
+###如何工作
+
+当我们调用`logger.info("msg")`的时候,到底是怎么发生的呢?  
+拿最简单的org.apache.log4j.ConsoleAppender举例子
+
+第一步:org.apache.log4j.Category.info(Object)
+
+```java
+public void info(Object message) {
+        if (repository.isDisabled(Level.INFO_INT)) 
+           return;
+        if (Level.INFO.isGreaterOrEqual(this.getEffectiveLevel())) 
+           forcedLog(FQCN, Level.INFO, message, null);
+    }
+```
+第二步:一直会调用父类中的`c.aai.appendLoopOnAppenders(event);`,除非把c.additive设置成false,默认为true
+
+```java
+	protected void forcedLog(String fqcn, Priority level, Object message, Throwable t) {
+        callAppenders(new LoggingEvent(fqcn, this, level, message, t));
+    }
+    public void callAppenders(LoggingEvent event) {
+        int writes = 0;
+        for (Category c = this; c != null; c = c.parent) {
+            // Protected against simultaneous call to addAppender, removeAppender,...
+            synchronized (c) {
+                if (c.aai != null) {
+                    writes += c.aai.appendLoopOnAppenders(event);
+                }
+                if (!c.additive) {
+                    break;
+                }
+            }
+        }
+        if (writes == 0) {
+            repository.emitNoAppenderWarning(this);
+        }
+    }
+```
+
+第三步:
+
+```java
+    public int appendLoopOnAppenders(LoggingEvent event) {
+        int size = 0;
+        Appender appender;
+        if (appenderList != null) {
+            size = appenderList.size();
+            for (int i = 0; i < size; i++) {
+                appender = (Appender) appenderList.elementAt(i);
+                appender.doAppend(event);
+            }
+        }
+        return size;
+    }
+```
+第四步:调用真正的logger的doAppend方法
+
+```java
+
+  // Reminder: the nesting of calls is:
+  //
+  //    doAppend()
+  //      - check threshold
+  //      - filter
+  //      - append();
+  //        - checkEntryConditions();
+  //        - subAppend();
+	public void append(LoggingEvent event) {
+	    if (!checkEntryConditions()) {
+	        return;
+	    }
+	    subAppend(event);
+	}
+  //由于ConsoleAppender没有继承subAppend方法,所以实际就是调用了WriterAppender的subAppend方法
+  	protected void subAppend(LoggingEvent event) {
+	    this.qw.write(this.layout.format(event));
+	    if (layout.ignoresThrowable()) {
+	        String[] s = event.getThrowableStrRep();
+	        if (s != null) {
+	            int len = s.length;
+	            for (int i = 0; i < len; i++) {
+	                this.qw.write(s[i]);
+	                this.qw.write(Layout.LINE_SEP);
+	            }
+	        }
+	    }
+	    if (shouldFlush(event)) {
+	        this.qw.flush();
+	    }
+	}
+	//其中的qw由ConsoleAppender初始化
+	public void activateOptions() {
+        if (follow) {
+            if (target.equals(SYSTEM_ERR)) {
+               setWriter(createWriter(new SystemErrStream()));
+            } else {
+               setWriter(createWriter(new SystemOutStream()));
+            }
+        } else {
+            if (target.equals(SYSTEM_ERR)) {
+               setWriter(createWriter(System.err));
+            } else {
+               setWriter(createWriter(System.out));
+            }
+        }
+
+        super.activateOptions();
+  }
+    
+```
+通过这几个步骤就能把日志打印出来了.
