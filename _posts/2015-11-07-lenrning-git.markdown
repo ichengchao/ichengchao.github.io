@@ -17,7 +17,7 @@ tags:
 
 ###配置
 
-```
+```shell
 git config --global user.name "charles"
 git config --global user.email "charles@chengchao.name"
 git config --global push.default simple
@@ -32,7 +32,7 @@ git config --global alias.b branch
 
 常用配置命令:
 
-```
+```shell
 #查看配置,一般在~/.gitconfig
 git config -l
 #删除配置
@@ -46,7 +46,7 @@ git config --global --unset #key#
 `git clone git@git.oschina.net:ichengchao/git-test.git`  
 有个比较特殊的文件需要简单介绍一下`.gitignore`,该文件用于忽略一些文件或者文件夹,这个文件或者文件夹就不会提交到仓库中.简单的语法如下:
 
-```
+```shell
 #忽略所有.class结尾的文件
 *.class
 
@@ -59,5 +59,91 @@ git config --global --unset #key#
 #忽略所有target目录,会同时忽略/target和/tmp/target目录
 target/
 ```
+先新建一个文件master.txt,再推送仓库,当做是初始化master分支
 
+```shell
+echo "master content">>master.txt
+git add master.txt
+git ci -m "init master"
+git push
+```
+现在需要开发新功能,暂且叫featureA,那就需要新建一个分支.
 
+```shell
+#新建并切换到分支featureA
+git co -b featureA
+
+#提交分支到远程仓库
+git push origin featureA
+
+#模拟开发分支,增加一个featureA.txt文件,同时修改一下master.txt的内容
+echo "feature a">>featureA.txt
+echo "modify by featureA">>master.txt
+
+#提交
+git add *
+git ci -m "featureA done"
+#第一次提交需要set-upstream
+git push --set-upstream origin featureA
+```
+到此,featureA的功能已经全部开发完成,等待合并到master分支并发布.这是线上发现了一个bug,需要紧急修复.暂且把这个修复叫做hotfixA,同样的,这种操作也不能直接在master分支上操作.需要新建一个分支:hotfixA,但这个分支不用提交到远程仓库,直接本地测试完后就可以合并到master分支中.操作如下:
+
+```shell
+#先切换回master分支
+git co master
+#新建并切换到hotfixA分支
+git co -b hotfixA
+
+#该hotfix需要增加一个hotfixA.txt文件,同时也要修改一下master.txt中的内容
+echo "hotfix a">>hotfixA.txt
+echo "modify by hotfixA">>master.txt
+
+git add * && git ci -m "hotfixA done"
+```
+
+hotfixA开发完成,假设测试也已经通过,需要合并到master分支中
+
+```shell
+#切换回master分支
+git co master
+
+#合并hotfixA分支
+git merge hotfixA
+
+#提交
+git push
+
+#删除本地的hotfixA分支
+git b -d hotfixA
+```
+
+hotfixA上线后,featureA的功能也已经通过测试,需要合并到master,操作如下:
+
+```shell
+git merge featureA
+
+#由于hotfixA中的修改和featureA中的修改有冲突,提示如下:
+
+Auto-merging master.txt
+CONFLICT (content): Merge conflict in master.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
+收工解决冲突的方式有很多种,最简单的就是直接编辑冲突的文件.修改完成后重新执行`git add fileName`就可以了.不过但文件内容冲突的很厉害,而且文件内容比较多的情况下,这种方式的难度就比较大.这里推荐使用`git mergetool`命令.我用的是[SourceGear | DiffMerge](https://sourcegear.com/diffmerge/)工具.下载mac版本的installer方式安装.同时指定`git config --global merge.tool diffmerge`即可.不管使用那种方式merge,完成后执行如下操作:
+
+```shell
+git add *
+git ci -m "merge featureA branch"
+git push
+```
+这样master分支就可以发布了,一般我们发布完成后会打一个release的tag
+
+```shell
+#打一个release tag并推送到仓库
+git tag release-featureA
+git push --tag
+```
+下图为整个过程:  
+![git-tree](http://www.chengchao.name/resource-container/image/git-test-tree.png)  
+
+至此,一个完整的开发流程已经模拟完.基本的git使用应该没有问题了.  
+作业题: 把上面的`git merge`操作用`git rebase`替换.
