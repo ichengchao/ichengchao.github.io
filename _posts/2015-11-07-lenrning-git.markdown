@@ -30,7 +30,7 @@ git config --global alias.ci commit
 git config --global alias.b branch
 ```
 
-常用配置命令:
+常用命令:
 
 ```sh
 #查看配置,一般在~/.gitconfig
@@ -40,8 +40,8 @@ git config --global --unset #key#
 ```
 
 ###使用
-基本的使用命令,有很多地方都有,这边就不做介绍了.下面我通过一个测试项目来模拟一个真实的开发过程.
-首先在git仓库新建一个项目,暂且叫`git-test`.  
+基本的使用命令,很多地方都有,这边就不做介绍了.下面我通过一个测试项目来模拟一个真实的开发过程.
+首先在git仓库新建一个项目`git-test`.  
 第一步就是先导出到本地.命令很简单,就是git clone,可以选择http和ssh两种方式,我使用的ssh.由于之前已经把公钥导入到git仓库中.所以后续的操作都不用再输入用户名和密码了.  
 `git clone git@git.oschina.net:ichengchao/git-test.git`  
 有个比较特殊的文件需要简单介绍一下`.gitignore`,该文件用于忽略一些文件或者文件夹,这个文件或者文件夹就不会提交到仓库中.简单的语法如下:
@@ -67,7 +67,7 @@ git add master.txt
 git ci -m "init master"
 git push
 ```
-现在需要开发新功能,暂且叫featureA,那就需要新建一个分支.
+现在需要开发新功能叫featureA,那就需要新建一个分支.
 
 ```sh
 #新建并切换到分支featureA
@@ -86,7 +86,7 @@ git ci -m "featureA done"
 #第一次提交需要set-upstream
 git push --set-upstream origin featureA
 ```
-到此,featureA的功能已经全部开发完成,等待合并到master分支并发布.这是线上发现了一个bug,需要紧急修复.暂且把这个修复叫做hotfixA,同样的,这种操作也不能直接在master分支上操作.需要新建一个分支:hotfixA,但这个分支不用提交到远程仓库,直接本地测试完后就可以合并到master分支中.操作如下:
+到此,featureA的功能已经全部开发完成,等待测试完成后合并到master分支并发布.这时线上发现了一个bug,需要紧急修复.暂且把这个修复叫做hotfixA,同样的,这种操作也不能直接在master分支上操作.需要新建一个分支:hotfixA,但这个分支不用提交到远程仓库,直接本地测试完后就可以合并到master分支中.操作如下:
 
 ```sh
 #先切换回master分支
@@ -128,7 +128,7 @@ Auto-merging master.txt
 CONFLICT (content): Merge conflict in master.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
-收工解决冲突的方式有很多种,最简单的就是直接编辑冲突的文件.修改完成后重新执行`git add fileName`就可以了.不过但文件内容冲突的很厉害,而且文件内容比较多的情况下,这种方式的难度就比较大.这里推荐使用`git mergetool`命令.我用的是[SourceGear | DiffMerge](https://sourcegear.com/diffmerge/)工具.下载mac版本的installer方式安装.同时指定`git config --global merge.tool diffmerge`即可.不管使用那种方式merge,完成后执行如下操作:
+手工解决冲突的方式有很多种,最简单的就是直接编辑冲突的文件.修改完成后重新执行`git add fileName`就可以了.不过如果文件内容冲突的很厉害,而且文件内容比较多的情况下,这种合并方式的难度就比较大了.这里推荐使用`git mergetool`命令.我用的是[SourceGear | DiffMerge](https://sourcegear.com/diffmerge/)工具.下载mac版本的installer方式安装.同时指定`git config --global merge.tool diffmerge`即可.不管使用那种方式merge,完成后执行如下操作:
 
 ```sh
 git add *
