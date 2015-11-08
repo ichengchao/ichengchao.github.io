@@ -147,3 +147,16 @@ git push --tag
 
 至此,一个完整的开发流程已经模拟完.基本的git使用应该没有问题了.  
 作业题: 把上面的`git merge`操作用`git rebase`替换.
+
+终于可以安心的睡觉去了,刚刚躺下就接到了电话说featureA线上有缺陷,需要马上回滚.
+
+```sh
+git log
+
+#选择提交hotfix的id
+git reset --hard 103f501e31add9cee2aabcc4f7e1756f8bbefdcd
+
+#强制覆盖线上版本
+git push --force
+```
+搞定.当然也可以选择使用`git revert`来回滚,当使用`git revert`时,原来的featureA分支将不能再次合并.更多关于git reset和git revert的区别参见[该文章](http://yijiebuyi.com/blog/8f985d539566d0bf3b804df6be4e0c90.html)
