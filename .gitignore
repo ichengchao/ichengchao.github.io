@@ -2,6 +2,4 @@ _site/
 .sass-cache/
 .DS_Store/
 .DS_Store
-_posts/.DS_Store
 media/css/style.css.map
-*.markdown
