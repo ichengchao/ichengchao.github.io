@@ -10,7 +10,7 @@
  * --------------------------------- */
 
 @import url(/media/fonts/telex-regular.css);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);
+/*@import url(http://fonts.googleapis.com/css?family=Ubuntu:300);*/
 
 $font-name: "telexregular";
 $mono-font-name: "Ubuntu";
@@ -84,6 +84,7 @@ ul.listing {
 article {
   margin: 2em 0;
   p { padding: .7em 0; }
+  h1,h2,h3,h4 { padding-top: 20px; }
   .title {
     font-family: #{$label-font};
     a { @extend a; color: #777; }

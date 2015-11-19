@@ -160,3 +160,13 @@ git reset --hard 103f501e31add9cee2aabcc4f7e1756f8bbefdcd
 git push --force
 ```
 搞定.当然也可以选择使用`git revert`来回滚,当使用`git revert`时,原来的featureA分支将不能再次合并.更多关于git reset和git revert的区别参见[该文章](http://yijiebuyi.com/blog/8f985d539566d0bf3b804df6be4e0c90.html)
+
+###使用技巧
+好用的命令
+
+```sh
+#格式化查看log
+git log --pretty=format:"%h - %an, %ar : %s"
+
+git log --pretty=format:"%h %s" --graph
+```
