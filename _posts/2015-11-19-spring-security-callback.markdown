@@ -1,7 +1,6 @@
 ---
-title:spring security中login的callback 
+title: spring security中login的callback 
 layout: post
-guid: urn:uuid:f86b2e0d-f267-46c1-8dda-b7f6c0e9f241
 tags:
   - spring
   - java
