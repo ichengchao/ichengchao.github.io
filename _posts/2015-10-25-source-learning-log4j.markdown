@@ -9,7 +9,7 @@ tags:
 
 ---
 
-![logging service](https://logging.apache.org/log4j/1.2/images/ls-logo.jpg)
+![logging service](http://chengchao.name/resource-container/image/log4j-logo.jpg)
 
 ###说明
 分析的版本是1.2.17,跟最新的log4j2可能有较大出入.[下载地址](https://logging.apache.org/log4j/1.2/download.html)
