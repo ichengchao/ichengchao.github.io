@@ -8,7 +8,6 @@ tags:
   
 ---
 
-#Flask初识
 ###环境初始化
 - 安装 [python](https://www.python.org/)
 - 安装 [pip](http://pip-cn.readthedocs.org/en/latest/installing.html)
@@ -47,7 +46,7 @@ __author__ = 'charles'
 app = Flask(__name__)
 
 #设置日志
-logHandler = logging.FileHandler('/Users/charles/Documents/workspace-python/flaskweb/app.log')
+logHandler = logging.FileHandler('/Users/charles/myFlaskApp.log')
 logHandler.setLevel(logging.INFO)
 app.logger.addHandler(logHandler)
 app.logger.setLevel(logging.INFO)
@@ -75,4 +74,8 @@ pip install gunicorn
 #部署
 cd projectDir
 gunicorn -w 1 myAppName:app --log-file test.log
+
+#参数
+-D 表示后台运行
+-b 127.0.0.1:8000
 ```
