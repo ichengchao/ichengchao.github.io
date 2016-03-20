@@ -15,7 +15,7 @@ tags:
 
 安装完python和pip之后最好安装一下[virtualenv](https://virtualenv.pypa.io/en/latest/).看名字就知道是虚拟环境,用来隔离系统的python环境用的.简单的说就像是虚拟机,可以在上面随便折腾.安装也很简单,直接用pip.
 
-```shell
+```sh
 sudo pip install virtualenv
 
 #指定一个目录,创建虚拟环境
@@ -29,7 +29,7 @@ virtualenv myvenv
 
 命令行中会带`myvenv`,表示所有的python操作都在这个环境下进行.接着我们安装flask
 
-```shell
+```sh
 pip install Flask
 ```
 这样环境都初始化好了.
@@ -69,7 +69,7 @@ if __name__ == '__main__':
 ###用gunicorn部署
 当然要在生成环境中部署的话,就需要使用容器了.比较有名的就是`gunicorn`
 
-```shell
+```sh
 pip install gunicorn
 
 #部署
