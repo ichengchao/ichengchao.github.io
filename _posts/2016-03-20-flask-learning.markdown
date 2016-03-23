@@ -10,7 +10,8 @@ tags:
 
 ###环境初始化
 - 安装 [python](https://www.python.org/)
-- 安装 [pip](https://pip.pypa.io/en/stable/installing/)
+- 安装 [pyenv](https://github.com/yyuu/pyenv),用于管理python的版本
+- 安装 [pip](https://pip.pypa.io/en/stable/installing/),用于管理python的依赖,最好是在virtualenv的基础上安装
 
 安装完python和pip之后最好安装一下[virtualenv](https://virtualenv.pypa.io/en/latest/).看名字就知道是虚拟环境,用来隔离系统的python环境用的.简单的说就像是虚拟机,可以在上面随便折腾.安装也很简单,直接用pip.
 
