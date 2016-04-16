@@ -1,5 +1,5 @@
 ---
-title: [转]拷贝文件内容到剪切板
+title: (转摘)拷贝文件内容到剪切板
 layout: post
 tags:
   - os
