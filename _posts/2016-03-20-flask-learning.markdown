@@ -71,6 +71,8 @@ if __name__ == '__main__':
 
 ```sh
 pip install gunicorn
+#使用-i参数指定地址,使用阿里云mirrors
+pip install gunicorn -i http://mirrors.aliyun.com/pypi/simple/
 
 #部署
 cd projectDir
