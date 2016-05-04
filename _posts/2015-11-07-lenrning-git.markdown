@@ -39,10 +39,11 @@ git config -l
 git config --global --unset #key#
 
 #获取远程分支,最好名称是一样的
-git b 本地分支名称 远程分支名称
+git fetch
+git co 分支名称
 
 #直接切换
-git co -b 本地分支名称 远程分支名称
+git co -b 新建分支名称
 
 #查看所有分支,如果没有看到远程分支,需要git fetch一下
 git b -a
